@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week10-exercises</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #ddd;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+
+</head>
+<body>
+<h1>第10周：练习题目</h1>
+<h2>第一类换元积分法（凑微分法）</h2>
+<h3>选择题</h3>
+<ul>
+<li>$\int 3x^2 e^{x^3} dx$ 等于：</li>
+</ul>
+<p>   A. $e^{x^3} + C$</p>
+<p>   B. $e^{x^3} + C$</p>
+<p>   C. $3e^{x^3} + C$</p>
+<p>   D. $\frac{1}{3}e^{x^3} + C$</p>
+<ul>
+<li>$\int \frac{dx}{x \ln x}$ 等于：</li>
+</ul>
+<p>   A. $\ln|\ln x| + C$</p>
+<p>   B. $\frac{1}{\ln x} + C$</p>
+<p>   C. $\ln x + C$</p>
+<p>   D. $\frac{1}{x} + C$</p>
+<ul>
+<li>$\int \sin^3 x \cos x dx$ 等于：</li>
+</ul>
+<p>   A. $\frac{\sin^4 x}{4} + C$</p>
+<p>   B. $\frac{\sin^3 x}{3} + C$</p>
+<p>   C. $\frac{\cos^4 x}{4} + C$</p>
+<p>   D. $\cos^3 x + C$</p>
+<h3>填空题</h3>
+<ul>
+<li>$\int \frac{dx}{\sqrt{1 - x^2}} = $ __________。</li>
+<li>$\int \frac{x dx}{1 + x^2} = $ __________。</li>
+<li>$\int \sec^2 x dx = $ __________。</li>
+<li>$\int \csc^2 x dx = $ __________。</li>
+<li>$\int \frac{e^x dx}{1 + e^x} = $ __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>计算 $\int \frac{(\ln x)^2}{x} dx$。</li>
+</ul>
+<ul>
+<li>计算 $\int \tan x dx$。</li>
+</ul>
+<ul>
+<li>计算 $\int \frac{dx}{a^2 - x^2}$（$a > 0$）。</li>
+</ul>
+<ul>
+<li>计算 $\int \sin^2 x dx$。</li>
+</ul>
+<h2>第二类换元积分法</h2>
+<h3>选择题</h3>
+<ul>
+<li>对于 $\int \sqrt{a^2 - x^2} dx$，应令：</li>
+</ul>
+<p>   A. $x = a \tan t$</p>
+<p>   B. $x = a \sin t$</p>
+<p>   C. $x = a \sec t$</p>
+<p>   D. $x = a \cos t$</p>
+<ul>
+<li>$\int \frac{dx}{\sqrt{x^2 + a^2}}$ 等于：</li>
+</ul>
+<p>   A. $\arcsin \frac{x}{a} + C$</p>
+<p>   B. $\ln|x + \sqrt{x^2 + a^2}| + C$</p>
+<p>   C. $\ln|x + \sqrt{x^2 - a^2}| + C$</p>
+<p>   D. $\arctan \frac{x}{a} + C$</p>
+<ul>
+<li>对于 $\int \sqrt{x^2 - a^2} dx$，应令：</li>
+</ul>
+<p>   A. $x = a \sin t$</p>
+<p>   B. $x = a \tan t$</p>
+<p>   C. $x = a \sec t$</p>
+<p>   D. $x = a \cos t$</p>
+<h3>填空题</h3>
+<ul>
+<li>$\int \frac{dx}{\sqrt{4 - x^2}} = $ __________。</li>
+<li>$\int \frac{dx}{\sqrt{x^2 + 9}} = $ __________。</li>
+<li>$\int \sqrt{1 - x^2} dx = $ __________。</li>
+<li>$\int \sqrt{x^2 + 4} dx = $ __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>计算 $\int \frac{dx}{\sqrt{x^2 - 4}}$（$x > 2$）。</li>
+</ul>
+<ul>
+<li>计算 $\int x \sqrt{a^2 - x^2} dx$（$a > 0$）。</li>
+</ul>
+<ul>
+<li>计算 $\int \frac{x^2 dx}{\sqrt{a^2 - x^2}}$（$a > 0$）。</li>
+</ul>
+<h2>综合应用</h2>
+<h3>选择题</h3>
+<ul>
+<li>$\int \frac{x + 1}{x^2 + 2x + 5} dx$ 等于：</li>
+</ul>
+<p>   A. $\frac{1}{2} \ln(x^2 + 2x + 5) + C$</p>
+<p>   B. $\ln(x^2 + 2x + 5) + C$</p>
+<p>   C. $2\ln(x^2 + 2x + 5) + C$</p>
+<p>   D. $\frac{x^2}{2} + x + 5x + C$</p>
+<ul>
+<li>$\int \frac{dx}{x^2 + 4x + 5}$ 等于：</li>
+</ul>
+<p>   A. $\arctan(x + 2) + C$</p>
+<p>   B. $\ln(x^2 + 4x + 5) + C$</p>
+<p>   C. $\frac{1}{x + 2} + C$</p>
+<p>   D. $\arcsin(x + 2) + C$</p>
+<h3>填空题</h3>
+<ul>
+<li>$\int \frac{dx}{1 + e^x} = $ __________。</li>
+<li>$\int \frac{e^x - 1}{e^x + 1} dx = $ __________。</li>
+<li>$\int \frac{\sin x}{\cos^3 x} dx = $ __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>计算 $\int \frac{x^3}{1 + x^2} dx$。</li>
+</ul>
+<ul>
+<li>计算 $\int \frac{dx}{x^2 - 4x + 5}$。</li>
+</ul>
+<ul>
+<li>计算 $\int \sin^4 x dx$。</li>
+</ul>
+<ul>
+<li>计算 $\int \cos^3 x dx$。</li>
+</ul>
+<ul>
+<li>计算 $\int \frac{dx}{\sin x}$。</li>
+</ul>
+</body>
+</html>

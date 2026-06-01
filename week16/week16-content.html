@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第16周：偏导数</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+        h1, h2, h3 { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        pre { background-color: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; border: 1px solid #ddd; }
+        code { background-color: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Consolas', 'Monaco', monospace; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin: 10px 0; padding-left: 30px; }
+        li { margin: 5px 0; }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+</head>
+<body>
+<h1>第16周：偏导数</h1>
+<h2>学习目标</h2>
+<ul>
+<li>掌握多元复合函数的求导法则</li>
+<li>理解隐函数的存在定理</li>
+<li>掌握隐函数求导方法</li>
+<li>理解方向导数与梯度的概念</li>
+<li>掌握条件极值与拉格朗日乘数法</li>
+</ul>
+<h2>学习内容</h2>
+<h3>1. 多元复合函数的求导法则</h3>
+<h4>1.1 链式法则</h4>
+<p>设 $z = f(u, v)$，$u = \phi(x, y)$，$v = \psi(x, y)$，则：</p>
+<p>$$\frac{\partial z}{\partial x} = \frac{\partial z}{\partial u} \frac{\partial u}{\partial x} + \frac{\partial z}{\partial v} \frac{\partial v}{\partial x}$$</p>
+<p>$$\frac{\partial z}{\partial y} = \frac{\partial z}{\partial u} \frac{\partial u}{\partial y} + \frac{\partial z}{\partial v} \frac{\partial v}{\partial y}$$</p>
+<h4>1.2 全导数</h4>
+<p>设 $z = f(u, v, w)$，$u = u(t)$，$v = v(t)$，$w = w(t)$，则全导数：</p>
+<p>$$\frac{dz}{dt} = \frac{\partial z}{\partial u} \frac{du}{dt} + \frac{\partial z}{\partial v} \frac{dv}{dt} + \frac{\partial z}{\partial w} \frac{dw}{dt}$$</p>
+<h3>2. 隐函数求导</h3>
+<h4>2.1 隐函数存在定理</h4>
+<p>设 $F(x, y) = 0$，若在点 $(x_0, y_0)$ 的邻域内满足：</p>
+<ul>
+<li>$F_x$ 和 $F_y$ 连续</li>
+<li>$F(x_0, y_0) = 0$</li>
+<li>$F_y(x_0, y_0) \neq 0$</li>
+</ul>
+<p>则在 $x_0$ 的某邻域内唯一存在一个连续可导的函数 $y = f(x)$，使得 $F(x, f(x)) = 0$。</p>
+<h4>2.2 隐函数求导公式</h4>
+<p>由 $F(x, y) = 0$，两端对 $x$ 求导：</p>
+<p>$$\frac{dy}{dx} = -\frac{F_x}{F_y}$$</p>
+<p>对于 $F(x, y, z) = 0$：</p>
+<p>$$\frac{\partial z}{\partial x} = -\frac{F_x}{F_z}, \quad \frac{\partial z}{\partial y} = -\frac{F_y}{F_z}$$</p>
+<h3>3. 方向导数与梯度</h3>
+<h4>3.1 方向导数</h4>
+<p>设 $\vec{l} = (\cos \alpha, \cos \beta)$ 为方向，则</p>
+<p>$$\frac{\partial f}{\partial \vec{l}} = f_x \cos \alpha + f_y \cos \beta$$</p>
+<h4>3.2 梯度</h4>
+<p>$$\nabla f = (f_x, f_y)$$</p>
+<p>梯度方向是函数增长最快的方向，沿梯度方向的方向导数等于梯度的大小。</p>
+<h3>4. 极值与条件极值</h3>
+<h4>4.1 二元函数极值</h4>
+<p>设 $f(x, y)$ 在 $(x_0, y_0)$ 的某邻域内有定义，若对邻域内任意点 $(x, y)$ 都有 $f(x, y) \leq f(x_0, y_0)$（或 $\geq$），则称 $(x_0, y_0)$ 为极大值点（或极小值点）。</p>
+<p>必要条件：$f_x = 0$，$f_y = 0$。</p>
+<p>充分条件：设 $A = f_{xx}$，$B = f_{xy}$，$C = f_{yy}$，则：</p>
+<ul>
+<li>$AC - B^2 > 0$ 时有极值（$A < 0$ 时为极大值，$A > 0$ 时为极小值）</li>
+<li>$AC - B^2 < 0$ 时无极值</li>
+<li>$AC - B^2 = 0$ 时需进一步讨论</li>
+</ul>
+<h4>4.2 条件极值与拉格朗日乘数法</h4>
+<p>求 $z = f(x, y)$ 在约束条件 $g(x, y) = 0$ 下的极值。</p>
+<p>构造拉格朗日函数：$L(x, y, \lambda) = f(x, y) + \lambda g(x, y)$</p>
+<p>解方程组：</p>
+<p>$$\begin{cases} f_x + \lambda g_x = 0 \\ f_y + \lambda g_y = 0 \\ g(x, y) = 0 \end{cases}$$</p>
+<h3>5. 偏导数的应用</h3>
+<h4>5.1 几何应用</h4>
+<p>曲面 $z = f(x, y)$ 在点 $(x_0, y_0, z_0)$ 处的切平面方程：</p>
+<p>$$z - z_0 = f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)$$</p>
+<h4>5.2 最值问题</h4>
+<p>在实际问题中，求函数在有界闭区域上的最大最小值，需考虑边界上的值和内部极值。</p>
+<h2>学习建议</h2>
+<ul>
+<li>熟练掌握复合函数求导的链式法则</li>
+<li>注意区分偏导数和全导数</li>
+<li>理解隐函数存在定理的条件</li>
+<li>掌握拉格朗日乘数法的应用步骤</li>
+</ul>
+</body>
+</html>

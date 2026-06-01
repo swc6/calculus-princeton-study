@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week16-solutions</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+        h1, h2, h3 { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        pre { background-color: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; border: 1px solid #ddd; }
+        code { background-color: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Consolas', 'Monaco', monospace; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin: 10px 0; padding-left: 30px; }
+        li { margin: 5px 0; }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+
+</head>
+<body>
+<h1>第16周：练习答案</h1>
+<h2>复合函数求导</h2>
+<h3>选择题</h3>
+<ul>
+<li>B. $f_u \cdot 2x$</li>
+</ul>
+<p>   解析：$\frac{\partial z}{\partial x} = \frac{\partial z}{\partial u} \frac{\partial u}{\partial x} = f_u \cdot 2x$。</p>
+<ul>
+<li>B. $e^{\sin t \cdot t^2} \cdot (t^2 \cos t + 2t \sin t)$</li>
+</ul>
+<p>   解析：$\frac{dz}{dt} = \frac{\partial z}{\partial x} \frac{dx}{dt} + \frac{\partial z}{\partial y} \frac{dy}{dt} = ye^{xy} \cos t + xe^{xy} \cdot 2t = e^{\sin t \cdot t^2}(t^2 \cos t + 2t \sin t)$。</p>
+<h3>填空题</h3>
+<ul>
+<li>$2(u + v) + 2uv \cdot v = 2(u + v) + 2uv^2$（需明确 $v$ 对 $u$ 的关系，此处 $v = uv$ 需澄清）</li>
+</ul>
+<ul>
+<li>全导数考虑所有自变量随 $t$ 变化，而偏导数只考虑一个自变量变化</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>$\frac{\partial z}{\partial x} = \cos(\frac{x^2}{y^2}) \cdot \frac{2x}{y^2}$，$\frac{\partial z}{\partial y} = \cos(\frac{x^2}{y^2}) \cdot (-\frac{2x^2}{y^3})$</li>
+</ul>
+<ul>
+<li>证：$\frac{\partial z}{\partial x} = f' \cdot 2x$，$\frac{\partial z}{\partial y} = f' \cdot 2y$，所以 $y \frac{\partial z}{\partial x} - x \frac{\partial z}{\partial y} = 2xyf' - 2xyf' = 0$。</li>
+</ul>
+<h2>隐函数求导</h2>
+<h3>选择题</h3>
+<ul>
+<li>B. $-\frac{x}{y}$</li>
+</ul>
+<p>   解析：$F(x, y) = x^2 + y^2 - 1$，$\frac{dy}{dx} = -\frac{F_x}{F_y} = -\frac{2x}{2y} = -\frac{x}{y}$。</p>
+<ul>
+<li>A. $\frac{yz}{e^z - xy}$</li>
+</ul>
+<p>   解析：$F(x, y, z) = e^z - xyz = 0$，$\frac{\partial z}{\partial x} = -\frac{F_x}{F_z} = -\frac{-yz}{e^z - xy} = \frac{yz}{e^z - xy}$。</p>
+<h3>填空题</h3>
+<ul>
+<li>曲线在该点有切线（隐函数存在）</li>
+</ul>
+<ul>
+<li>$-\frac{F_x}{F_z}$</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>$\frac{\partial z}{\partial x} = -\frac{x}{z}$，$\frac{\partial z}{\partial y} = -\frac{y}{z}$</li>
+</ul>
+<ul>
+<li>$\frac{\partial z}{\partial x} = \frac{yz}{e^z - xy}$，$\frac{\partial z}{\partial y} = \frac{xz}{e^z - xy}$</li>
+</ul>
+<h2>方向导数与梯度</h2>
+<h3>选择题</h3>
+<ul>
+<li>A. $(2, 2)$</li>
+</ul>
+<p>   解析：$\nabla f = (f_x, f_y) = (2x, 2y)$，在 $(1, 1)$ 处为 $(2, 2)$。</p>
+<ul>
+<li>C. 最大</li>
+</ul>
+<p>   解析：沿梯度方向的方向导数最大，等于梯度的大小。</p>
+<h3>填空题</h3>
+<ul>
+<li>向量</li>
+</ul>
+<ul>
+<li>$f_x \cos \alpha + f_y \cos \beta$</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>方向 $\vec{l}$ 的单位向量为 $(\frac{3}{5}, \frac{4}{5})$，$\nabla f = (2x - y, 2y - x) = (1, 1)$，$\frac{\partial f}{\partial \vec{l}} = 1 \cdot \frac{3}{5} + 1 \cdot \frac{4}{5} = \frac{7}{5}$</li>
+</ul>
+<ul>
+<li>$\nabla f = (\frac{2x}{x^2 + y^2}, \frac{2y}{x^2 + y^2})$，方向导数 $\frac{2(x+y)}{5(x^2 + y^2)}$（沿 $(1,1)$ 方向）</li>
+</ul>
+<h2>极值与条件极值</h2>
+<h3>选择题</h3>
+<ul>
+<li>B. 极小值点</li>
+</ul>
+<p>   解析：$f(x, y) = x^2 + y^2$ 在 $(0, 0)$ 处有极小值 $0$。</p>
+<ul>
+<li>C. 有鞍点</li>
+</ul>
+<p>   解析：$f(x, y) = x^2 - y^2$ 的海赛矩阵行列式 $AC - B^2 = -4 < 0$，为鞍点。</p>
+<h3>填空题</h3>
+<ul>
+<li>$0$；$0$</li>
+</ul>
+<ul>
+<li>极小值</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>由 $f_x = 2x - 4 = 0$，$f_y = 2y - 2 = 0$ 得驻点 $(2, 1)$，$f(2, 1) = 0$ 为极小值。</li>
+</ul>
+<ul>
+<li>拉格朗日函数 $L = x^2 + y^2 + \lambda(x + y - 1)$，解得 $x = y = \frac{1}{2}$，极小值为 $\frac{1}{2}$。</li>
+</ul>
+<ul>
+<li>设长方体边长为 $x, y, z$，则 $2(xy + xz + yz) = a^2$，体积 $V = xyz$。由拉格朗日乘数法得 $x = y = z = \frac{a}{\sqrt{6}}$，此时体积最大。</li>
+</ul>
+<h2>几何应用</h2>
+<h3>解答题</h3>
+<ul>
+<li>切平面方程：$z - 2 = 2(x - 1) + 2(y - 1)$，即 $2x + 2y - z = 2$</li>
+</ul>
+<ul>
+<li>法线方程：$\frac{x - \frac{1}{2}}{1} = \frac{y - \frac{1}{2}}{1} = \frac{z - \frac{\sqrt{2}}{2}}{-\sqrt{2}}$</li>
+</ul>
+</body>
+</html>

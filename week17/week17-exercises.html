@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week17-exercises</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+        h1, h2, h3 { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        pre { background-color: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; border: 1px solid #ddd; }
+        code { background-color: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Consolas', 'Monaco', monospace; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin: 10px 0; padding-left: 30px; }
+        li { margin: 5px 0; }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+
+</head>
+<body>
+<h1>第17周：练习题目</h1>
+<h2>二重积分概念</h2>
+<h3>选择题</h3>
+<ul>
+<li>二重积分 $\iint_D f(x, y) d\sigma$ 的几何意义是：</li>
+</ul>
+<p>   A. 曲线的长度</p>
+<p>   B. 曲面的面积</p>
+<p>   C. 曲顶柱体的体积（当 $f \geq 0$）</p>
+<p>   D. 平面图形的面积</p>
+<ul>
+<li>若在区域 $D$ 上 $f(x, y) \leq g(x, y)$，则：</li>
+</ul>
+<p>   A. $\iint_D f d\sigma > \iint_D g d\sigma$</p>
+<p>   B. $\iint_D f d\sigma < \iint_D g d\sigma$</p>
+<p>   C. $\iint_D f d\sigma = \iint_D g d\sigma$</p>
+<p>   D. 无法比较</p>
+<h3>填空题</h3>
+<ul>
+<li>二重积分的中值定理：若 $f$ 连续，则存在 $(\xi, \eta) \in D$，使得 $\iint_D f d\sigma = $ __________。</li>
+<li>若 $f$ 在 $D$ 上恒为 $1$，则 $\iint_D f d\sigma = $ __________。</li>
+</ul>
+<h2>直角坐标系下的计算</h2>
+<h3>选择题</h3>
+<ul>
+<li>区域 $D$ 由 $x = 0$，$x = 1$，$y = 0$，$y = x$ 围成，则 $\iint_D xy d\sigma = $</li>
+</ul>
+<p>   A. $\int_0^1 \int_0^x xy dy dx$</p>
+<p>   B. $\int_0^1 \int_0^1 xy dy dx$</p>
+<p>   C. $\int_0^x \int_0^1 xy dy dx$</p>
+<p>   D. $\int_0^1 \int_x^1 xy dy dx$</p>
+<h3>填空题</h3>
+<ul>
+<li>将 $\int_0^1 \int_0^{\sqrt{1-x^2}} f(x, y) dy dx$ 化为极坐标系下的二次积分为 __________。</li>
+<li>交换积分次序：$\int_0^1 \int_x^{\sqrt{x}} f(x, y) dy dx = $ __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>计算 $\iint_D x y d\sigma$，其中 $D$ 由 $y = x$ 和 $y = x^2$ 围成。</li>
+</ul>
+<ul>
+<li>计算 $\iint_D e^{x+y} d\sigma$，其中 $D = [0, 1] \times [0, 1]$。</li>
+</ul>
+<ul>
+<li>将 $\int_0^1 \int_y^1 f(x, y) dx dy$ 交换积分次序。</li>
+</ul>
+<h2>极坐标系下的计算</h2>
+<h3>选择题</h3>
+<ul>
+<li>在极坐标系中，面积元素 $d\sigma = $</li>
+</ul>
+<p>   A. $dr d\theta$</p>
+<p>   B. $r dr d\theta$</p>
+<p>   C. $r^2 dr d\theta$</p>
+<p>   D. $drd\theta$</p>
+<ul>
+<li>圆 $x^2 + y^2 = a^2$ 在极坐标系下的方程为：</li>
+</ul>
+<p>   A. $r = a$</p>
+<p>   B. $r = a^2$</p>
+<p>   C. $r = \cos\theta$</p>
+<p>   D. $r = \sin\theta$</p>
+<h3>填空题</h3>
+<ul>
+<li>将 $x^2 + y^2 \leq 2x$ 化为极坐标不等式：__________。</li>
+<li>二重积分 $\iint_D f(x, y) d\sigma$ 在极坐标系下化为 __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>计算 $\iint_D \sqrt{x^2 + y^2} d\sigma$，其中 $D$ 为单位圆 $x^2 + y^2 \leq 1$。</li>
+</ul>
+<ul>
+<li>计算 $\iint_D \ln(1 + x^2 + y^2) d\sigma$，其中 $D: 1 \leq x^2 + y^2 \leq 4$。</li>
+</ul>
+<h2>三重积分</h2>
+<h3>选择题</h3>
+<ul>
+<li>在直角坐标系下，三重积分的体积元素 $dV = $</li>
+</ul>
+<p>   A. $dx dy$</p>
+<p>   B. $dx dy dz$</p>
+<p>   C. $d\sigma dz$</p>
+<p>   D. $r dr d\theta dz$</p>
+<ul>
+<li>在柱面坐标系中，$x = $</li>
+</ul>
+<p>   A. $r \cos\theta$</p>
+<p>   B. $r \sin\theta$</p>
+<p>   C. $\rho \sin\varphi \cos\theta$</p>
+<p>   D. $\rho \cos\varphi$</p>
+<h3>填空题</h3>
+<ul>
+<li>在球面坐标系中，$dV = $ __________。</li>
+<li>柱面坐标系与直角坐标系的关系：$x = $ __________，$y = $ __________，$z = $ __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>计算 $\iiint_\Omega x dV$，其中 $\Omega$ 是三个坐标平面与平面 $x + y + z = 1$ 围成的区域。</li>
+</ul>
+<ul>
+<li>计算 $\iiint_\Omega xyz dV$，其中 $\Omega: 0 \leq z \leq 1$，$0 \leq y \leq 1$，$0 \leq x \leq 1$。</li>
+</ul>
+<h2>重积分应用</h2>
+<h3>选择题</h3>
+<ul>
+<li>平面薄片 $D$ 的质量 $m = $</li>
+</ul>
+<p>   A. $\iint_D \rho d\sigma$</p>
+<p>   B. $\iint_D x \rho d\sigma$</p>
+<p>   C. $\iint_D y \rho d\sigma$</p>
+<p>   D. $\frac{\iint_D \rho d\sigma}{\iint_D d\sigma}$</p>
+<ul>
+<li>曲面 $z = f(x, y)$ 的面积公式为：</li>
+</ul>
+<p>   A. $\iint_D \sqrt{1 + f_x^2 + f_y^2} d\sigma$</p>
+<p>   B. $\iint_D f_x^2 + f_y^2 d\sigma$</p>
+<p>   C. $\iint_D 1 d\sigma$</p>
+<p>   D. $\iint_D f d\sigma$</p>
+<h3>解答题</h3>
+<ul>
+<li>求半球面 $z = \sqrt{a^2 - x^2 - y^2}$ 的面积。</li>
+</ul>
+<ul>
+<li>求密度为 $\rho(x, y) = xy$ 的单位正方形薄片的质心。</li>
+</ul>
+<ul>
+<li>求半径为 $R$ 的球的体积（用三重积分）。</li>
+</ul>
+</body>
+</html>

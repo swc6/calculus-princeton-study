@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week6-exercises</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #ddd;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+
+</head>
+<body>
+<h1>第6周：练习题目</h1><h2>微分中值定理</h2><h3>选择题</h3><ul><li>下列函数在区间$[0, 2]$上满足罗尔定理条件的是：</li></ul><p>   A. $f(x) = |x - 1|$</p><p>   B. $f(x) = x^2 - 2x$</p><p>   C. $f(x) = \frac{1}{x}$</p><p>   D. $f(x) = \sqrt{x - 1}$</p><ul><li>设函数$f(x)$在$[a, b]$上连续，在$(a, b)$内可导，且$f(a) = f(b)$，则：</li></ul><p>   A. 必存在$\xi \in (a, b)$，使$f'(\xi) = 0$</p><p>   B. 必存在$\xi \in (a, b)$，使$f(\xi) = 0$</p><p>   C. 必存在$\xi \in (a, b)$，使$f'(\xi) = \frac{f(b) - f(a)}{b - a}$</p><p>   D. 以上都不对</p><ul><li>若函数$f(x)$在$(a, b)$内可导，且$f'(x) = 0$，则$f(x)$在$(a, b)$内：</li></ul><p>   A. 必为常数</p><p>   B. 可能为常数</p><p>   C. 必不是常数</p><p>   D. 以上都不对</p><h3>填空题</h3><ul><li>函数$f(x) = x^3 - 3x$在区间$[-1, 1]$上满足罗尔定理条件，则$\xi = $ __________</li></ul><ul><li>设$f(x) = \ln x$，在区间$[1, e]$上应用拉格朗日中值定理，$\xi = $ __________</li></ul><ul><li>函数$f(x) = x^2$在区间$[0, 2]$上满足拉格朗日中值定理，则$\xi = $ __________</li></ul><h3>解答题</h3><ul><li>验证函数$f(x) = x^3 - 3x^2 + 2x$在区间$[0, 2]$上满足罗尔定理条件，并求$\xi$。</li></ul><ul><li>验证函数$f(x) = \sin x$在区间$[0, \pi]$上满足罗尔定理条件，并求$\xi$。</li></ul><ul><li>应用拉格朗日中值定理证明：当$x > 0$时，$\frac{x}{1 + x} < \ln(1 + x) < x$。</li></ul><ul><li>应用拉格朗日中值定理证明：当$a > b > 0$时，$\frac{a - b}{a} < \ln \frac{a}{b} < \frac{a - b}{b}$。</li></ul><ul><li>设函数$f(x)$在$[0, 1]$上连续，在$(0, 1)$内可导，且$f(0) = 0$，$f(1) = 1$。证明：存在$\xi \in (0, 1)$，使得$f(\xi) = 1 - \xi$。</li></ul><h2>洛必达法则</h2><h3>选择题</h3><ul><li>下列极限中，不能直接使用洛必达法则的是：</li></ul><p>   A. $\lim_{x \to 0} \frac{\sin x}{x}$</p><p>   B. $\lim_{x \to \infty} \frac{x}{e^x}$</p><p>   C. $\lim_{x \to 0} \frac{x^2 \sin \frac{1}{x}}{\sin x}$</p><p>   D. $\lim_{x \to 0} \frac{e^x - 1}{x}$</p><ul><li>$\lim_{x \to 0} \frac{\ln(1 + x)}{x} = $</li></ul><p>   A. 0</p><p>   B. 1</p><p>   C. -1</p><p>   D. $\infty$</p><ul><li>$\lim_{x \to \infty} \frac{x^n}{e^x} = $（$n$为正整数）</li></ul><p>   A. 0</p><p>   B. 1</p><p>   C. $\infty$</p><p>   D. $n!$</p><h3>填空题</h3><ul><li>$\lim_{x \to 0} \frac{\sin 3x}{x} = $ __________</li></ul><ul><li>$\lim_{x \to \infty} \frac{\ln x}{x} = $ __________</li></ul><ul><li>$\lim_{x \to 0} \frac{e^x - e^{-x}}{\sin x} = $ __________</li></ul><h3>解答题</h3><ul><li>用洛必达法则求$\lim_{x \to 0} \frac{\sin x - x}{x^3}$。</li></ul><ul><li>用洛必达法则求$\lim_{x \to 0} \frac{e^x - 1 - x}{x^2}$。</li></ul><ul><li>用洛必达法则求$\lim_{x \to \infty} \frac{x^2}{e^x}$。</li></ul><ul><li>用洛必达法则求$\lim_{x \to 0^+} x \ln x$。</li></ul><ul><li>用洛必达法则求$\lim_{x \to 0} \left(\frac{1}{x} - \frac{1}{\sin x}\right)$。</li></ul><ul><li>用洛必达法则求$\lim_{x \to 1} \frac{x^3 - 3x + 2}{x^3 - x^2 - x + 1}$。</li></ul><ul><li>用洛必达法则求$\lim_{x \to 0} (\cos x)^{1/x^2}$。</li></ul><ul><li>用洛必达法则求$\lim_{x \to 0^+} x^{\sin x}$。</li></ul><h2>泰勒中值定理</h2><h3>选择题</h3><ul><li>$e^x$的3阶麦克劳林多项式是：</li></ul><p>   A. $1 + x + \frac{x^2}{2!} + \frac{x^3}{3!}$</p><p>   B. $1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!}$</p><p>   C. $1 + x + x^2 + x^3$</p><p>   D. $1 + x + \frac{x^2}{2} + \frac{x^3}{6}$</p><ul><li>$\sin x$的5阶麦克劳林多项式是：</li></ul><p>   A. $x - \frac{x^3}{3!} + \frac{x^5}{5!}$</p><p>   B. $x - \frac{x^3}{6} + \frac{x^5}{120}$</p><p>   C. $x + \frac{x^3}{3!} - \frac{x^5}{5!}$</p><p>   D. $1 - \frac{x^2}{2!} + \frac{x^4}{4!}$</p><ul><li>函数$f(x)$在$x = a$处的泰勒展开式中，$(x - a)^n$的系数是：</li></ul><p>   A. $\frac{f^{(n)}(a)}{n!}$</p><p>   B. $f^{(n)}(a)$</p><p>   C. $\frac{f^{(n)}(0)}{n!}$</p><p>   D. $f^{(n)}(0)$</p><h3>填空题</h3><ul><li>$\cos x$的4阶麦克劳林多项式是 __________</li></ul><ul><li>$\ln(1 + x)$的3阶麦克劳林多项式是 __________</li></ul><ul><li>$e^{2x}$的2阶麦克劳林多项式是 __________</li></ul><h3>解答题</h3><ul><li>求函数$f(x) = e^x$在$x = 1$处的3阶泰勒多项式。</li></ul><ul><li>求函数$f(x) = \sin x$在$x = \frac{\pi}{4}$处的3阶泰勒多项式。</li></ul><ul><li>利用泰勒展开求$\lim_{x \to 0} \frac{\sin x - x + \frac{x^3}{6}}{x^5}$。</li></ul><ul><li>利用泰勒展开求$\lim_{x \to 0} \frac{e^x - 1 - x - \frac{x^2}{2}}{x^3}$。</li></ul><ul><li>将函数$f(x) = \frac{1}{1 + x}$展开为麦克劳林级数。</li></ul><h2>综合应用题</h2><ul><li>证明方程$x^3 - 3x + 1 = 0$在区间$(0, 1)$内至少有一个实根。</li></ul><ul><li>设函数$f(x)$在$[a, b]$上连续，在$(a, b)$内可导，且$f(a) = f(b) = 0$。证明：存在$\xi \in (a, b)$，使得$f'(\xi) = f(\xi)$。</li></ul><ul><li>设函数$f(x)$在$[0, 1]$上连续，在$(0, 1)$内可导，且$f(0) = 0$，$f(1) = 1$。证明：存在$\xi \in (0, 1)$，使得$f'(\xi) = 2\xi$。</li></ul><ul><li>用洛必达法则求$\lim_{x \to 0} \frac{\tan x - \sin x}{x^3}$。</li></ul><ul><li>用泰勒展开求$\lim_{x \to 0} \frac{\ln(1 + x) - x + \frac{x^2}{2}}{x^3}$。</li></ul><ul><li>证明不等式：当$x > 0$时，$e^x > 1 + x + \frac{x^2}{2} + \frac{x^3}{6}$。</li></ul><ul><li>设函数$f(x)$在$x = 0$处具有二阶导数，且$\lim_{x \to 0} \frac{f(x)}{x} = 1$，$f''(0) = 2$。求$\lim_{x \to 0} \frac{f(x) - x}{x^2}$。</li></ul><ul><li>用泰勒展开求$\lim_{x \to 0} \frac{1 - \cos x}{x^2}$。</li></ul><ul><li>设函数$f(x)$在$[a, b]$上连续，在$(a, b)$内可导，且$f'(x) \neq 0$。证明：存在$\xi, \eta \in (a, b)$，使得$\frac{f'(\xi)}{f'(\eta)} = \frac{e^b - e^a}{b - a} e^{-\eta}$。</li></ul><ul><li>求函数$f(x) = x^4 - 4x^3 + 6x^2 - 4x + 1$在$x = 1$处的泰勒展开式。</li></ul>
+</body>
+</html>

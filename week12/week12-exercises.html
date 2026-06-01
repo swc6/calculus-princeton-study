@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week12-exercises</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #ddd;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+
+</head>
+<body>
+<h1>第12周：练习题目</h1>
+<h2>基本概念</h2>
+<h3>选择题</h3>
+<ul>
+<li>若级数 $\sum a_n$ 收敛，则必有：</li>
+</ul>
+<p>   A. $a_n$ 单调递减</p>
+<p>   B. $\lim_{n \to \infty} a_n = 0$</p>
+<p>   C. $\lim_{n \to \infty} a_n = 1$</p>
+<p>   D. $\sum |a_n|$ 收敛</p>
+<ul>
+<li>几何级数 $\sum_{n=0}^{\infty} (\frac{1}{3})^n$ 的和为：</li>
+</ul>
+<p>   A. $\frac{3}{2}$</p>
+<p>   B. $\frac{1}{2}$</p>
+<p>   C. $\frac{3}{4}$</p>
+<p>   D. $\frac{1}{3}$</p>
+<ul>
+<li>级数 $\sum_{n=1}^{\infty} \frac{n}{n+1}$ 的敛散性为：</li>
+</ul>
+<p>   A. 收敛</p>
+<p>   B. 发散</p>
+<p>   C. 条件收敛</p>
+<p>   D. 绝对收敛</p>
+<h3>填空题</h3>
+<ul>
+<li>级数 $\sum_{n=1}^{\infty} \frac{1}{2^n} = $ __________。</li>
+<li>若 $\lim_{n \to \infty} a_n \neq 0$，则级数 $\sum a_n$ __________。</li>
+<li>几何级数 $\sum_{n=0}^{\infty} ar^n$ 收敛的充分必要条件是 __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>判断级数 $\sum_{n=1}^{\infty} \frac{n}{n^2 + 1}$ 的敛散性。</li>
+</ul>
+<ul>
+<li>求几何级数 $\sum_{n=0}^{\infty} \frac{2^n}{3^n}$ 的和。</li>
+</ul>
+<h2>正项级数判别</h2>
+<h3>选择题</h3>
+<ul>
+<li>用比较判别法判断 $\sum \frac{1}{n^2 + 1}$ 的敛散性，应与哪个级数比较？</li>
+</ul>
+<p>   A. $\sum \frac{1}{n}$</p>
+<p>   B. $\sum \frac{1}{n^2}$</p>
+<p>   C. $\sum \frac{1}{2^n}$</p>
+<p>   D. $\sum \frac{1}{\sqrt{n}}$</p>
+<ul>
+<li>级数 $\sum_{n=1}^{\infty} \frac{n!}{n^n}$ 的敛散性为：</li>
+</ul>
+<p>   A. 收敛</p>
+<p>   B. 发散</p>
+<p>   C. 无法判断</p>
+<p>   D. 比值判别法失效</p>
+<ul>
+<li>用比值判别法判断 $\sum \frac{3^n}{n^2}$，有 $\lim \frac{a_{n+1}}{a_n} = $</li>
+</ul>
+<p>   A. $0$</p>
+<p>   B. $3$</p>
+<p>   C. $\frac{1}{3}$</p>
+<p>   D. $\infty$</p>
+<h3>填空题</h3>
+<ul>
+<li>$p$ 级数 $\sum \frac{1}{n^p}$ 当 $p$ __________ 时收敛，当 $p$ __________ 时发散。</li>
+<li>级数 $\sum \frac{1}{n \ln n}$ 的敛散性为 __________（用积分判别法）。</li>
+<li>用根值判别法判断 $\sum (\frac{n}{n+1})^n$ 的敛散性，$\lim \sqrt[n]{a_n} = $ __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>判断 $\sum_{n=1}^{\infty} \frac{1}{n^2 + n}$ 的敛散性。</li>
+</ul>
+<ul>
+<li>判断 $\sum_{n=1}^{\infty} \frac{n!}{10^n}$ 的敛散性。</li>
+</ul>
+<ul>
+<li>判断 $\sum_{n=1}^{\infty} \frac{2^n}{n(n+1)}$ 的敛散性。</li>
+</ul>
+<ul>
+<li>判断 $\sum_{n=1}^{\infty} \frac{1}{\sqrt{n^3 + 1}}$ 的敛散性。</li>
+</ul>
+<h2>交错级数</h2>
+<h3>选择题</h3>
+<ul>
+<li>交错级数 $\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n}$</li>
+</ul>
+<p>   A. 绝对收敛</p>
+<p>   B. 条件收敛</p>
+<p>   C. 发散</p>
+<p>   D. 无法判断</p>
+<ul>
+<li>莱布尼茨判别法适用于：</li>
+</ul>
+<p>   A. 正项级数</p>
+<p>   B. 交错级数</p>
+<p>   C. 任意级数</p>
+<p>   D. 几何级数</p>
+<ul>
+<li>交错级数 $\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{\sqrt{n}}$</li>
+</ul>
+<p>   A. 绝对收敛</p>
+<p>   B. 条件收敛</p>
+<p>   C. 发散</p>
+<p>   D. 敛散性无法判断</p>
+<h3>填空题</h3>
+<ul>
+<li>交错级数 $\sum_{n=1}^{\infty} (-1)^{n-1} a_n$ 收敛的条件是 $a_n$ __________ 且 __________。</li>
+<li>交错调和级数 $\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n}$ 的和等于 __________。</li>
+<li>级数 $\sum \frac{(-1)^{n-1}}{n^2}$ 是 __________ 收敛。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>判断 $\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n^2}$ 的敛散性。</li>
+</ul>
+<ul>
+<li>判断 $\sum_{n=1}^{\infty} (-1)^{n-1} \frac{n}{n+1}$ 的敛散性。</li>
+</ul>
+<ul>
+<li>判断 $\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{\ln(n+1)}$ 的敛散性。</li>
+</ul>
+<h2>综合判别</h2>
+<h3>选择题</h3>
+<ul>
+<li>级数 $\sum_{n=1}^{\infty} \frac{\sin n}{n^2}$</li>
+</ul>
+<p>   A. 绝对收敛</p>
+<p>   B. 条件收敛</p>
+<p>   C. 发散</p>
+<p>   D. 无法判断</p>
+<ul>
+<li>若 $\lim_{n \to \infty} \sqrt[n]{a_n} = \frac{1}{2}$，则 $\sum a_n$</li>
+</ul>
+<p>   A. 收敛</p>
+<p>   B. 发散</p>
+<p>   C. 无法判断</p>
+<p>   D. 可能收敛也可能发散</p>
+<h3>填空题</h3>
+<ul>
+<li>判断 $\sum_{n=1}^{\infty} \frac{(-1)^{n-1} n}{n^2 + 1}$ 为 __________ 收敛。</li>
+<li>级数 $\sum_{n=1}^{\infty} \frac{1}{1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{n}}$ 的敛散性为 __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>判断 $\sum_{n=1}^{\infty} \frac{(-1)^{n-1} n^2}{2^n}$ 的敛散性。</li>
+</ul>
+<ul>
+<li>判断 $\sum_{n=1}^{\infty} \frac{1}{n} \sin \frac{\pi}{n}$ 的敛散性。</li>
+</ul>
+<ul>
+<li>判断 $\sum_{n=1}^{\infty} (-1)^{n-1} \frac{1}{n^p}$ 的敛散性（讨论 $p$ 的取值）。</li>
+</ul>
+<ul>
+<li>求级数 $\sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}$ 的和。</li>
+</ul>
+</body>
+</html>

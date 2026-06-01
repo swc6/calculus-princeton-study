@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week13-exercises</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+        h1, h2, h3 { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        pre { background-color: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; border: 1px solid #ddd; }
+        code { background-color: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Consolas', 'Monaco', monospace; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin: 10px 0; padding-left: 30px; }
+        li { margin: 5px 0; }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+
+</head>
+<body>
+<h1>第13周：练习题目</h1>
+<h2>收敛半径与收敛域</h2>
+<h3>选择题</h3>
+<ul>
+<li>幂级数 $\sum_{n=0}^{\infty} \frac{x^n}{n!}$ 的收敛半径为：</li>
+</ul>
+<p>   A. $1$</p>
+<p>   B. $e$</p>
+<p>   C. $\infty$</p>
+<p>   D. $0$</p>
+<ul>
+<li>幂级数 $\sum_{n=1}^{\infty} n x^n$ 的收敛域为：</li>
+</ul>
+<p>   A. $(-1, 1)$</p>
+<p>   B. $[-1, 1]$</p>
+<p>   C. $(-1, 1]$</p>
+<p>   D. $[-1, 1)$</p>
+<h3>填空题</h3>
+<ul>
+<li>若 $\lim_{n \to \infty} |\frac{a_{n+1}}{a_n}| = 2$，则幂级数 $\sum a_n x^n$ 的收敛半径为 __________。</li>
+<li>幂级数 $\sum_{n=0}^{\infty} \frac{(x-1)^n}{2^n}$ 的收敛区间为 __________。</li>
+<li>$\sum_{n=1}^{\infty} \frac{x^{2n}}{n}$ 的收敛域为 __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>求 $\sum_{n=1}^{\infty} \frac{(x+1)^n}{n^2}$ 的收敛域。</li>
+</ul>
+<ul>
+<li>求 $\sum_{n=0}^{\infty} \frac{n!}{n^n} x^n$ 的收敛半径。</li>
+</ul>
+<ul>
+<li>求 $\sum_{n=1}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!}$ 的收敛域。</li>
+</ul>
+<h2>幂级数运算</h2>
+<h3>选择题</h3>
+<ul>
+<li>若 $\sum a_n x^n$ 的收敛半径为 $R$，则 $\sum n a_n x^{n-1}$ 的收敛半径为：</li>
+</ul>
+<p>   A. $R$</p>
+<p>   B. $R-1$</p>
+<p>   C. $R+1$</p>
+<p>   D. $\frac{R}{n}$</p>
+<ul>
+<li>幂级数 $\sum_{n=0}^{\infty} x^n$ 在其收敛区间内：</li>
+</ul>
+<p>   A. 可以逐项求导</p>
+<p>   B. 可以逐项积分</p>
+<p>   C. A和B都正确</p>
+<p>   D. A和B都不正确</p>
+<h3>填空题</h3>
+<ul>
+<li>若 $\sum a_n x^n = f(x)$，则 $\sum \frac{a_n}{n+1} x^{n+1} = $ __________。</li>
+<li>已知 $e^x = \sum \frac{x^n}{n!}$，则 $\int e^x dx = $ __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>已知 $\sin x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!}$，求 $\cos x$ 的展开式。</li>
+</ul>
+<ul>
+<li>利用逐项求导求 $\sum_{n=1}^{\infty} n x^{n-1}$ 的和函数。</li>
+</ul>
+<h2>函数展开成幂级数</h2>
+<h3>选择题</h3>
+<ul>
+<li>$f(x) = e^{2x}$ 的麦克劳林展开式为：</li>
+</ul>
+<p>   A. $\sum \frac{(2x)^n}{n!}$</p>
+<p>   B. $\sum \frac{x^n}{n!}$</p>
+<p>   C. $2 \sum \frac{x^n}{n!}$</p>
+<p>   D. $\sum \frac{x^{2n}}{n!}$</p>
+<ul>
+<li>$\ln(1+x)$ 的展开式成立的范围为：</li>
+</ul>
+<p>   A. $|x| < 1$</p>
+<p>   B. $|x| \leq 1$</p>
+<p>   C. $-1 < x \leq 1$</p>
+<p>   D. $-1 \leq x < 1$</p>
+<h3>填空题</h3>
+<ul>
+<li>$\frac{1}{1+x^2} = $ __________（写出展开式的前4项）。</li>
+<li>$x^2 e^x = $ __________（写出展开式的前4项）。</li>
+<li>$\arctan x = $ __________（写出展开式的前4项）。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>将 $f(x) = \frac{1}{1-x}$ 展开成 $x$ 的幂级数。</li>
+</ul>
+<ul>
+<li>将 $f(x) = \ln(1+x)$ 展开成 $x$ 的幂级数，并指出收敛域。</li>
+</ul>
+<ul>
+<li>将 $f(x) = \sin^2 x$ 展开成 $x$ 的幂级数。</li>
+</ul>
+<ul>
+<li>将 $f(x) = \frac{1}{1+x}$ 展开成 $x-1$ 的幂级数。</li>
+</ul>
+<h2>综合应用</h2>
+<h3>解答题</h3>
+<ul>
+<li>利用幂级数计算 $\int_0^1 e^{-x^2} dx$ 的近似值（取前3项）。</li>
+</ul>
+<ul>
+<li>利用幂级数求 $\sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}$ 的和。</li>
+</ul>
+<ul>
+<li>求 $\sum_{n=1}^{\infty} n x^n$ 的和函数。</li>
+</ul>
+<ul>
+<li>求 $\sum_{n=0}^{\infty} \frac{x^{n+1}}{n+1}$ 的和函数。</li>
+</ul>
+</body>
+</html>

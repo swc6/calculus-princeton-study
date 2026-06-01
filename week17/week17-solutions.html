@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week17-solutions</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+        h1, h2, h3 { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        pre { background-color: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; border: 1px solid #ddd; }
+        code { background-color: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Consolas', 'Monaco', monospace; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin: 10px 0; padding-left: 30px; }
+        li { margin: 5px 0; }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+
+</head>
+<body>
+<h1>第17周：练习答案</h1>
+<h2>二重积分概念</h2>
+<h3>选择题</h3>
+<ul>
+<li>C. 曲顶柱体的体积（当 $f \geq 0$）</li>
+</ul>
+<p>   解析：二重积分的几何意义是以 $D$ 为底、$z = f(x,y)$ 为顶的曲顶柱体体积。</p>
+<ul>
+<li>B. $\iint_D f d\sigma < \iint_D g d\sigma$</li>
+</ul>
+<p>   解析：由重积分的不等式性质可得。</p>
+<h3>填空题</h3>
+<ul>
+<li>$f(\xi, \eta) \cdot S_D$</li>
+</ul>
+<ul>
+<li>$S_D$（区域 $D$ 的面积）</li>
+</ul>
+<h2>直角坐标系下的计算</h2>
+<h3>选择题</h3>
+<ul>
+<li>A. $\int_0^1 \int_0^x xy dy dx$</li>
+</ul>
+<p>   解析：$D$ 的 $x$ 范围是 $[0, 1]$，对每个 $x$，$y$ 从 $0$ 到 $x$。</p>
+<h3>填空题</h3>
+<ul>
+<li>$\int_0^{\pi/2} \int_0^1 f(r\cos\theta, r\sin\theta) r dr d\theta$</li>
+</ul>
+<ul>
+<li>$\int_0^1 \int_{y^2}^y f(x, y) dx dy$（或交换次序后 $\int_0^1 \int_{y^2}^y f(x, y) dx dy$）</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>$\iint_D x y d\sigma = \int_0^1 \int_{x^2}^x xy dy dx = \int_0^1 [\frac{xy^2}{2}]_{x^2}^x dx = \int_0^1 \frac{x^3 - x^5}{2} dx = \frac{1}{24}$</li>
+</ul>
+<ul>
+<li>$\iint_{[0,1]^2} e^{x+y} d\sigma = (\int_0^1 e^x dx)^2 = (e - 1)^2$</li>
+</ul>
+<ul>
+<li>交换次序：$\int_0^1 \int_0^{\sqrt{y}} f(x, y) dx dy$ 或 $\int_0^1 \int_x^{x^2} f(x, y) dy dx$？实际上原积分 $y$ 从 $0$ 到 $x$，$x$ 从 $y$ 到 $1$，即 $0 \leq y \leq x \leq 1$，交换得 $\int_0^1 \int_0^x f(x, y) dy dx$。</li>
+</ul>
+<h2>极坐标系下的计算</h2>
+<h3>选择题</h3>
+<ul>
+<li>B. $r dr d\theta$</li>
+</ul>
+<p>   解析：极坐标系下面积元素为 $r dr d\theta$。</p>
+<ul>
+<li>A. $r = a$</li>
+</ul>
+<p>   解析：圆 $x^2 + y^2 = a^2$ 在极坐标下为 $r = a$。</p>
+<h3>填空题</h3>
+<ul>
+<li>$0 \leq r \leq 2\cos\theta$，$-\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}$</li>
+</ul>
+<ul>
+<li>$\int \int f(r\cos\theta, r\sin\theta) r dr d\theta$</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>$\iint_{x^2+y^2 \leq 1} \sqrt{x^2 + y^2} d\sigma = \int_0^{2\pi} \int_0^1 r \cdot r dr d\theta = 2\pi \cdot \frac{1}{3} = \frac{2\pi}{3}$</li>
+</ul>
+<ul>
+<li>用极坐标：$\int_0^{2\pi} \int_1^2 \ln(1 + r^2) r dr d\theta = 2\pi \int_1^2 r \ln(1+r^2) dr = \pi [(1+r^2)\ln(1+r^2) - r^2]_1^2 = \pi(5\ln5 - 4\ln4 - 1)$</li>
+</ul>
+<h2>三重积分</h2>
+<h3>选择题</h3>
+<ul>
+<li>B. $dx dy dz$</li>
+</ul>
+<p>   解析：直角坐标系下 $dV = dx dy dz$。</p>
+<ul>
+<li>A. $r \cos\theta$</li>
+</ul>
+<p>   解析：柱面坐标系中 $x = r\cos\theta$。</p>
+<h3>填空题</h3>
+<ul>
+<li>$r^2 \sin\varphi dr d\varphi d\theta$</li>
+</ul>
+<ul>
+<li>$r\cos\theta$；$r\sin\theta$；$z$</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>$\iiint_\Omega x dV = \int_0^1 \int_0^{1-x} \int_0^{1-x-y} x dz dy dx = \int_0^1 \int_0^{1-x} x(1-x-y) dy dx = \int_0^1 \frac{x(1-x)^2}{2} dx = \frac{1}{120}$</li>
+</ul>
+<ul>
+<li>$\iiint_{[0,1]^3} xyz dV = (\int_0^1 x dx)^3 = (\frac{1}{2})^3 = \frac{1}{8}$</li>
+</ul>
+<h2>重积分应用</h2>
+<h3>选择题</h3>
+<ul>
+<li>A. $\iint_D \rho d\sigma$</li>
+</ul>
+<p>   解析：质量等于密度在区域上的积分。</p>
+<ul>
+<li>A. $\iint_D \sqrt{1 + f_x^2 + f_y^2} d\sigma$</li>
+</ul>
+<p>   解析：曲面面积的计算公式。</p>
+<h3>解答题</h3>
+<ul>
+<li>半球面面积 $= \iint_{x^2+y^2 \leq a^2} \sqrt{1 + \frac{x^2+y^2}{a^2 - x^2 - y^2}} d\sigma = \iint_{x^2+y^2 \leq a^2} \frac{a}{\sqrt{a^2 - x^2 - y^2}} d\sigma$</li>
+</ul>
+<p>   $= \int_0^{2\pi} \int_0^a \frac{a r}{\sqrt{a^2 - r^2}} dr d\theta = 2\pi a [- \sqrt{a^2 - r^2}]_0^a = 2\pi a^2$</p>
+<ul>
+<li>质心 $\bar{x} = \frac{\iint_D x \cdot xy d\sigma}{\iint_D xy d\sigma} = \frac{\iint_D x^2 y d\sigma}{\iint_D xy d\sigma}$，对称性得 $\bar{x} = \bar{y}$</li>
+</ul>
+<p>   $= \frac{2}{3}$（需具体计算）</p>
+<ul>
+<li>球的体积 $= \int_{-R}^R \iint_{x^2+y^2 \leq R^2 - z^2} dz d\sigma = \int_{-R}^R \pi(R^2 - z^2) dz = \frac{4}{3}\pi R^3$</li>
+</ul>
+</body>
+</html>

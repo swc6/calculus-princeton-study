@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week15-solutions</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+        h1, h2, h3 { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        pre { background-color: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; border: 1px solid #ddd; }
+        code { background-color: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Consolas', 'Monaco', monospace; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin: 10px 0; padding-left: 30px; }
+        li { margin: 5px 0; }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+
+</head>
+<body>
+<h1>第15周：练习答案</h1>
+<h2>多元函数概念</h2>
+<h3>选择题</h3>
+<ul>
+<li>B. $x^2 + y^2 < 4$</li>
+</ul>
+<p>   解析：需 $4 - x^2 - y^2 > 0$，即 $x^2 + y^2 < 4$。</p>
+<ul>
+<li>A. $x + y > 0$</li>
+</ul>
+<p>   解析：对数函数定义域要求真数大于零。</p>
+<h3>填空题</h3>
+<ul>
+<li>$5$</li>
+</ul>
+<p>   解析：$f(1, 2) = 1^2 + 2^2 = 5$。</p>
+<ul>
+<li>空间中的一张曲面</li>
+</ul>
+<h2>极限与连续</h2>
+<h3>选择题</h3>
+<ul>
+<li>C. 不存在</li>
+</ul>
+<p>   解析：沿不同路径 $y = kx$ 趋近时，$\frac{xy}{x^2 + y^2} = \frac{k}{1 + k^2}$，值随 $k$ 变化而不同。</p>
+<ul>
+<li>B. 不连续</li>
+</ul>
+<p>   解析：极限 $\lim_{(x,y) \to (0,0)} \frac{xy}{x^2 + y^2}$ 不存在（与路径有关），与函数值 $0$ 不相等。</p>
+<h3>填空题</h3>
+<ul>
+<li>连续</li>
+</ul>
+<ul>
+<li>沿所有路径的极限都存在且相等</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>不存在</li>
+</ul>
+<p>   解析：沿 $y = x$ 趋近得 $2$，沿 $y = 2x$ 趋近得 $\frac{3}{2}$，不相等。</p>
+<ul>
+<li>不连续</li>
+</ul>
+<p>   解析：极限与路径有关。</p>
+<h2>偏导数</h2>
+<h3>选择题</h3>
+<ul>
+<li>A. $3x^2 y^2$</li>
+</ul>
+<p>   解析：$f_x = \frac{\partial (x^3 y^2)}{\partial x} = 3x^2 y^2$。</p>
+<ul>
+<li>B. $y e^{xy}$</li>
+</ul>
+<p>   解析：$\frac{\partial e^{xy}}{\partial x} = e^{xy} \cdot y$。</p>
+<h3>填空题</h3>
+<ul>
+<li>$\frac{2x}{x^2 + y^2}$；$\frac{2y}{x^2 + y^2}$</li>
+</ul>
+<ul>
+<li>$2 \sin y$</li>
+</ul>
+<p>   解析：$f_{xx} = \frac{\partial^2 (x^2 \sin y)}{\partial x^2} = 2 \sin y$。</p>
+<h3>解答题</h3>
+<ul>
+<li>$\frac{\partial z}{\partial x} = 2xy + \frac{1}{y} e^{x/y}$，$\frac{\partial z}{\partial y} = x^2 - \frac{x}{y^2} e^{x/y}$</li>
+</ul>
+<ul>
+<li>$f_{xx} = \frac{2xy}{(x^2 + y^2)^2}$，$f_{yy} = \frac{-2xy}{(x^2 + y^2)^2}$，$f_{xy} = \frac{y^2 - x^2}{(x^2 + y^2)^2}$，$f_{yx} = \frac{y^2 - x^2}{(x^2 + y^2)^2}$</li>
+</ul>
+<h2>全微分</h2>
+<h3>选择题</h3>
+<ul>
+<li>A. $2x dx + 2y dy$</li>
+</ul>
+<p>   解析：$dz = \frac{\partial z}{\partial x} dx + \frac{\partial z}{\partial y} dy = 2x dx + 2y dy$。</p>
+<ul>
+<li>A. $e dx + e dy$</li>
+</ul>
+<p>   解析：$dz = ye^{xy} dx + xe^{xy} dy$，在 $(1,1)$ 处为 $e dx + e dy$。</p>
+<h3>填空题</h3>
+<ul>
+<li>偏导数存在且连续（或函数可微）</li>
+</ul>
+<ul>
+<li>必定存在</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>$dz = \cos(x + y) dx + \cos(x + y) dy = \cos(x + y)(dx + dy)$</li>
+</ul>
+<ul>
+<li>$du = yz dx + xz dy + xy dz$</li>
+</ul>
+<ul>
+<li>$dz = \frac{x}{\sqrt{x^2 + y^2}} dx + \frac{y}{\sqrt{x^2 + y^2}} dy$，在 $(3,4)$ 处：$dz = \frac{3}{5} \cdot 0.1 + \frac{4}{5} \cdot 0.2 = 0.14 + 0.16 = 0.3$</li>
+</ul>
+<h2>方向导数与梯度</h2>
+<h3>选择题</h3>
+<ul>
+<li>A. $2\sqrt{2}$</li>
+</ul>
+<p>   解析：$\nabla f = (2x, 2y) = (2, 2)$，沿梯度方向的大小为 $|\nabla f| = 2\sqrt{2}$。</p>
+<h3>填空题</h3>
+<ul>
+<li>$(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y})$</li>
+</ul>
+<ul>
+<li>梯度的大小</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>$\vec{l}$ 的单位向量为 $(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$，$\nabla f = (2x + y, x + 2y) = (3, 3)$，$\frac{\partial f}{\partial \vec{l}} = 3 \cdot \frac{1}{\sqrt{2}} + 3 \cdot \frac{1}{\sqrt{2}} = 3\sqrt{2}$</li>
+</ul>
+<ul>
+<li>$\nabla f = (\frac{x}{x^2 + y^2}, \frac{y}{x^2 + y^2})$</li>
+</ul>
+</body>
+</html>

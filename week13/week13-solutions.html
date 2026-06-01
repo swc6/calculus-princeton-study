@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week13-solutions</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+        h1, h2, h3 { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        pre { background-color: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; border: 1px solid #ddd; }
+        code { background-color: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Consolas', 'Monaco', monospace; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin: 10px 0; padding-left: 30px; }
+        li { margin: 5px 0; }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+
+</head>
+<body>
+<h1>第13周：练习答案</h1>
+<h2>收敛半径与收敛域</h2>
+<h3>选择题</h3>
+<ul>
+<li>C. $\infty$</li>
+</ul>
+<p>   解析：$\rho = \lim \frac{1/(n+1)!}{1/n!} = \lim \frac{1}{n+1} = 0$，$R = \frac{1}{\rho} = \infty$。</p>
+<ul>
+<li>C. $(-1, 1]$</li>
+</ul>
+<p>   解析：$\rho = 1$，$R = 1$。在 $x = 1$ 时，$\sum n$ 发散；在 $x = -1$ 时，$\sum (-1)^n n$ 发散。故收敛域为 $(-1, 1]$。</p>
+<h3>填空题</h3>
+<ul>
+<li>$R = \frac{1}{2}$</li>
+</ul>
+<p>   解析：$R = \frac{1}{\rho} = \frac{1}{2}$。</p>
+<ul>
+<li>$-1 < x < 3$</li>
+</ul>
+<p>   解析：$\rho = \frac{1}{2}$，$R = 2$。收敛区间为 $(1-2, 1+2) = (-1, 3)$。</p>
+<ul>
+<li>$-1 \leq x < 1$</li>
+</ul>
+<p>   解析：这是 $\sum \frac{x^{2n}}{n}$，可写成 $\sum \frac{(x^2)^n}{n}$，$x^2 < 1$ 即 $|x| < 1$。当 $x = 1$ 时，$\sum 1$ 发散；当 $x = -1$ 时，$\sum (-1)^n$ 发散。故收敛域为 $[-1, 1)$。</p>
+<h3>解答题</h3>
+<ul>
+<li>收敛域为 $[-2, 0]$</li>
+</ul>
+<p>   解析：$\rho = 1$，$R = 1$，区间为 $(-2, 0)$。在 $x = -2$ 时，$\sum \frac{(-1)^n}{n^2}$ 收敛；在 $x = 0$ 时，$\sum 0$ 收敛。故收敛域为 $[-2, 0]$。</p>
+<ul>
+<li>$R = e$</li>
+</ul>
+<p>   解析：$\rho = \lim \frac{(n+1)!/(n+1)^{n+1}}{n!/n^n} = \lim \frac{n^n}{(n+1)^n} = \frac{1}{e}$，$R = e$。</p>
+<ul>
+<li>收敛域为 $(-\infty, +\infty)$</li>
+</ul>
+<p>   解析：$\rho = 0$，$R = \infty$，在整个实数轴上收敛。</p>
+<h2>幂级数运算</h2>
+<h3>选择题</h3>
+<ul>
+<li>A. $R$</li>
+</ul>
+<p>   解析：幂级数逐项求导或积分后收敛半径不变。</p>
+<ul>
+<li>C. A和B都正确</li>
+</ul>
+<p>   解析：幂级数在其收敛区间内既可以逐项求导也可以逐项积分。</p>
+<h3>填空题</h3>
+<ul>
+<li>$\int f(x) dx + C$</li>
+</ul>
+<p>   解析：逐项积分后仍是原函数加上常数。</p>
+<ul>
+<li>$e^x + C$</li>
+</ul>
+<p>   解析：逐项积分后得到原函数。</p>
+<h3>解答题</h3>
+<ul>
+<li>对 $\sin x$ 求导得 $\cos x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!}$</li>
+</ul>
+<ul>
+<li>$\sum_{n=1}^{\infty} n x^{n-1} = \frac{1}{(1-x)^2}$（$|x| < 1$）</li>
+</ul>
+<p>   解析：已知 $\sum_{n=0}^{\infty} x^n = \frac{1}{1-x}$，求导得 $\sum_{n=1}^{\infty} n x^{n-1} = \frac{1}{(1-x)^2}$。</p>
+<h2>函数展开成幂级数</h2>
+<h3>选择题</h3>
+<ul>
+<li>A. $\sum \frac{(2x)^n}{n!}$</li>
+</ul>
+<p>   解析：$e^{2x} = \sum \frac{(2x)^n}{n!}$。</p>
+<ul>
+<li>C. $-1 < x \leq 1$</li>
+</ul>
+<p>   解析：$\ln(1+x)$ 的展开式在 $x = 1$ 处条件收敛，在 $|x| < 1$ 内绝对收敛。</p>
+<h3>填空题</h3>
+<ul>
+<li>$1 - x^2 + x^4 - x^6 + \cdots$</li>
+</ul>
+<p>   解析：$\frac{1}{1+x^2} = \frac{1}{1-(-x^2)} = \sum (-1)^n x^{2n}$。</p>
+<ul>
+<li>$x^2 + x^3 + \frac{x^4}{2!} + \frac{x^5}{3!} + \cdots$</li>
+</ul>
+<p>   解析：$e^x = \sum \frac{x^n}{n!}$，乘以 $x^2$ 得 $x^2 e^x = \sum \frac{x^{n+2}}{n!} = \sum \frac{x^{n+2}}{(n-2)!}$（重新指标）。</p>
+<ul>
+<li>$x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots$</li>
+</ul>
+<p>   解析：$\arctan x = \int \frac{1}{1+x^2} dx = \int \sum (-1)^n x^{2n} dx = \sum \frac{(-1)^n x^{2n+1}}{2n+1}$。</p>
+<h3>解答题</h3>
+<ul>
+<li>$\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n$（$|x| < 1$）</li>
+</ul>
+<ul>
+<li>$\ln(1+x) = \sum_{n=1}^{\infty} \frac{(-1)^{n-1} x^n}{n}$（$-1 < x \leq 1$，$x \neq -1$）</li>
+</ul>
+<ul>
+<li>$\sin^2 x = \frac{1}{2} - \frac{1}{2} \cos 2x = \frac{1}{2} \sum_{n=1}^{\infty} \frac{(-1)^{n-1} (2x)^{2n}}{(2n)!}$</li>
+</ul>
+<ul>
+<li>$\frac{1}{1+x} = \frac{1}{2} \cdot \frac{1}{1 + \frac{x-1}{2}} = \frac{1}{2} \sum_{n=0}^{\infty} (-1)^n (\frac{x-1}{2})^n$（$|x-1| < 2$）</li>
+</ul>
+<h2>综合应用</h2>
+<h3>解答题</h3>
+<ul>
+<li>$\int_0^1 e^{-x^2} dx \approx 1 - \frac{1}{3} + \frac{1}{10} - \frac{1}{42} \approx 0.747$</li>
+</ul>
+<ul>
+<li>$\sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1} = \arctan 1 = \frac{\pi}{4}$</li>
+</ul>
+<ul>
+<li>$\sum_{n=1}^{\infty} n x^n = \frac{x}{(1-x)^2}$（$|x| < 1$）</li>
+</ul>
+<p>   解析：$\sum_{n=1}^{\infty} n x^n = x \sum_{n=1}^{\infty} n x^{n-1} = x \cdot \frac{1}{(1-x)^2}$。</p>
+<ul>
+<li>$\sum_{n=0}^{\infty} \frac{x^{n+1}}{n+1} = -\ln(1-x)$（$|x| < 1$）</li>
+</ul>
+<p>   解析：$\int \sum x^n dx = \int \frac{1}{1-x} dx = -\ln(1-x)$。</p>
+</body>
+</html>
