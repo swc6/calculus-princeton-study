@@ -23,6 +23,12 @@ const server = http.createServer((req, res) => {
     console.log(`${req.method} ${req.url}`);
 
     let filePath = '.' + req.url;
+    
+    // 处理 MathJax 字体路径重定向
+    if (filePath.startsWith('./js/output/chtml/fonts/woff-v2/')) {
+        filePath = './js/fonts/' + filePath.substring('./js/output/chtml/fonts/woff-v2/'.length);
+    }
+    
     if (filePath === './') {
         filePath = './week1/week1-content.html';
     }

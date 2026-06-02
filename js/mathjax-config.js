@@ -6,6 +6,6 @@ MathJax = {
         packages: {'[+]': ['ams']}
     },
     chtml: {
-        fontUrl: '../js/fonts'
+        fontUrl: './fonts'
     }
 };
