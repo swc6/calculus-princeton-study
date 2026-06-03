@@ -57,7 +57,7 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
     console.log('Available URLs:');
-    console.log('  - http://localhost:8081/week1/week1-content.html');
-    console.log('  - http://localhost:8081/week2/week2-content.html');
+    console.log('  - http://localhost:8081/week1/content.html');
+    console.log('  - http://localhost:8081/week2/content.html');
     console.log('  - ... and so on for other weeks');
 });
