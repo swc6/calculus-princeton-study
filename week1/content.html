@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一周：预备知识 - 函数、图像、三角学复习</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #ddd;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+</head>
+<body>
+<h1>第一周：预备知识 - 函数、图像、三角学复习</h1>
+<h2>学习目标</h2>
+<ul>
+<li>回顾基本代数和三角学知识</li>
+<li>理解函数的概念和性质</li>
+<li>掌握函数图像的绘制方法</li>
+<li>复习三角函数的基本性质和公式</li>
+</ul>
+<h2>学习内容</h2>
+<h3>1. 函数的概念</h3>
+<h3>1.1 函数的定义</h3>
+<ul>
+<li>函数是一种从一个集合（定义域）到另一个集合（值域）的映射</li>
+<li>每个输入值对应唯一的输出值</li>
+<li>函数的表示方法：</li>
+<li>代数表达式：如  f(x) = x^2 + 1</li>
+<li>图像表示：在坐标系中绘制函数曲线</li>
+<li>表格表示：列出输入和对应输出值</li>
+</ul>
+<h3>1.2 函数的定义域和值域</h3>
+<ul>
+<li>定义域：函数可以接受的所有输入值的集合</li>
+<li>值域：函数可能产生的所有输出值的集合</li>
+<li>常见函数的定义域：</li>
+<li>多项式函数：全体实数</li>
+<li>分式函数：分母不为零</li>
+<li>平方根函数：根号内非负</li>
+<li>对数函数：真数大于零</li>
+</ul>
+<h3>1.3 函数的类型</h3>
+<ul>
+<li>线性函数： f(x) = mx + b</li>
+<li>二次函数： f(x) = ax^2 + bx + c</li>
+<li>幂函数： f(x) = x^n</li>
+<li>指数函数： f(x) = a^x （ a > 0, a eq 1 ）</li>
+<li>对数函数： f(x) = og_a x （ a > 0, a eq 1 ）</li>
+<li>三角函数： in x, os x, an x 等</li>
+</ul>
+<h3>2. 函数图像</h3>
+<h3>2.1 基本函数图像</h3>
+<ul>
+<li>线性函数：直线</li>
+<li>二次函数：抛物线</li>
+<li>幂函数：根据指数不同，图像形状不同</li>
+<li>指数函数：递增或递减的曲线</li>
+<li>对数函数：过点 (1, 0) 的曲线</li>
+<li>三角函数：周期性波动曲线</li>
+</ul>
+<h3>2.2 图像变换</h3>
+<ul>
+<li>平移变换：</li>
+<li>水平平移： f(x - h) ，向右平移 h 个单位</li>
+<li>垂直平移： f(x) + k ，向上平移 k 个单位</li>
+<li>伸缩变换：</li>
+<li>水平伸缩： f(cx) ，当 c > 1 时，图像水平压缩</li>
+<li>垂直伸缩： c dot f(x) ，当 c > 1 时，图像垂直拉伸</li>
+<li>反射变换：</li>
+<li>关于 y 轴对称： f(-x)</li>
+<li>关于 x 轴对称： -f(x)</li>
+</ul>
+<h3>2.3 图像绘制技巧</h3>
+<ul>
+<li>确定定义域和值域</li>
+<li>找到截距（与坐标轴的交点）</li>
+<li>确定对称性</li>
+<li>找到极值点</li>
+<li>分析函数的单调性</li>
+<li>确定渐近线</li>
+</ul>
+<h3>3. 三角学复习</h3>
+<h3>3.1 基本三角函数</h3>
+<ul>
+<li>正弦函数： in heta = rac{对边}{斜边}</li>
+<li>余弦函数： os heta = rac{邻边}{斜边}</li>
+<li>正切函数： an heta = rac{对边}{邻边} = rac{in heta}{os heta}</li>
+<li>余切函数： ot heta = rac{邻边}{对边} = rac{os heta}{in heta}</li>
+<li>正割函数： ec heta = rac{斜边}{邻边} = rac{1}{os heta}</li>
+<li>余割函数： sc heta = rac{斜边}{对边} = rac{1}{in heta}</li>
+</ul>
+<h3>3.2 三角函数的基本性质</h3>
+<ul>
+<li>周期性：</li>
+<li> in( heta + 2i) = in heta</li>
+<li> os( heta + 2i) = os heta</li>
+<li> an( heta + i) = an heta</li>
+<li>奇偶性：</li>
+<li> in(- heta) = -in heta （奇函数）</li>
+<li> os(- heta) = os heta （偶函数）</li>
+<li> an(- heta) = -an heta （奇函数）</li>
+<li>定义域和值域：</li>
+<li> in heta 和 os heta 的定义域为全体实数，值域为 [-1, 1]</li>
+<li> an heta 的定义域为 heta eq rac{i}{2} + ki ，值域为全体实数</li>
+</ul>
+<h3>3.3 三角恒等式</h3>
+<ul>
+<li>勾股恒等式：</li>
+<li> in^2 heta + os^2 heta = 1</li>
+<li> 1 + an^2 heta = ec^2 heta</li>
+<li> 1 + ot^2 heta = sc^2 heta</li>
+<li>加法公式：</li>
+<li> in(A + B) = in A os B + os A in B</li>
+<li> os(A + B) = os A os B - in A in B</li>
+<li> an(A + B) = rac{ an A + an B}{1 - an A an B}</li>
+<li>二倍角公式：</li>
+<li> in 2 heta = 2 in heta os heta</li>
+<li> os 2 heta = os^2 heta - in^2 heta = 2os^2 heta - 1 = 1 - 2in^2 heta</li>
+<li> an 2 heta = rac{2 an heta}{1 - an^2 heta}</li>
+</ul>
+<h3>3.4 特殊角的三角函数值</h3>
+<table>
+<tr><td>角度（度）</td><td>角度（弧度）</td><td> in heta</td><td> os heta</td><td> an heta</td></tr>
+<tr><td>0°</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>30°</td><td> rac{i}{6}</td><td> rac{1}{2}</td><td> rac{qrt{3}}{2}</td><td> rac{1}{qrt{3}}</td></tr>
+<tr><td>45°</td><td> rac{i}{4}</td><td> rac{qrt{2}}{2}</td><td> rac{qrt{2}}{2}</td><td>1</td></tr>
+<tr><td>60°</td><td> rac{i}{3}</td><td> rac{qrt{3}}{2}</td><td> rac{1}{2}</td><td> qrt{3}</td></tr>
+<tr><td>90°</td><td> rac{i}{2}</td><td>1</td><td>0</td><td>无定义</td></tr>
+<tr><td>180°</td><td> i</td><td>0</td><td>-1</td><td>0</td></tr>
+<tr><td>270°</td><td> rac{3i}{2}</td><td>-1</td><td>0</td><td>无定义</td></tr>
+<tr><td>360°</td><td> 2i</td><td>0</td><td>1</td><td>0</td></tr>
+</table>
+<h2>学习建议</h2>
+<ul>
+<li>回顾高中数学中的函数和三角学知识</li>
+<li>完成教材中相关章节的例题和习题</li>
+<li>练习绘制各种函数的图像</li>
+<li>记忆重要的三角恒等式和特殊角的三角函数值</li>
+<li>尝试解决一些综合性的函数和三角学问题</li>
+</ul>
+</body>
+</html>

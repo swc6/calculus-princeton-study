@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week15-exercises</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+        h1, h2, h3 { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        pre { background-color: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; border: 1px solid #ddd; }
+        code { background-color: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Consolas', 'Monaco', monospace; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin: 10px 0; padding-left: 30px; }
+        li { margin: 5px 0; }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+
+</head>
+<body>
+<h1>第15周：练习题目</h1>
+<h2>多元函数概念</h2>
+<h3>选择题</h3>
+<ul>
+<li>函数 $f(x, y) = \frac{1}{\sqrt{4 - x^2 - y^2}}$ 的定义域为：</li>
+</ul>
+<p>   A. $x^2 + y^2 \leq 4$</p>
+<p>   B. $x^2 + y^2 < 4$</p>
+<p>   C. $x^2 + y^2 > 4$</p>
+<p>   D. $x^2 + y^2 = 4$</p>
+<ul>
+<li>函数 $z = \ln(x + y)$ 的定义域为：</li>
+</ul>
+<p>   A. $x + y > 0$</p>
+<p>   B. $x + y \geq 0$</p>
+<p>   C. $x + y < 0$</p>
+<p>   D. $x + y = 0$</p>
+<h3>填空题</h3>
+<ul>
+<li>函数 $f(x, y) = x^2 + y^2$ 在点 $(1, 2)$ 处的函数值为 __________。</li>
+<li>二元函数 $z = f(x, y)$ 的图形是 __________。</li>
+</ul>
+<h2>极限与连续</h2>
+<h3>选择题</h3>
+<ul>
+<li>$\lim_{(x,y) \to (0,0)} \frac{xy}{x^2 + y^2}$</li>
+</ul>
+<p>   A. $0$</p>
+<p>   B. $1$</p>
+<p>   C. 不存在</p>
+<p>   D. $\infty$</p>
+<ul>
+<li>函数 $f(x, y) = \begin{cases} \frac{xy}{x^2 + y^2} & (x,y) \neq (0,0) \\ 0 & (x,y) = (0,0) \end{cases}$ 在 $(0,0)$ 处：</li>
+</ul>
+<p>   A. 连续</p>
+<p>   B. 不连续</p>
+<p>   C. 无法判断</p>
+<p>   D. 可导</p>
+<h3>填空题</h3>
+<ul>
+<li>如果 $\lim_{(x,y) \to (0,0)} f(x, y) = f(0, 0)$，则 $f(x, y)$ 在 $(0, 0)$ 处 __________。</li>
+<li>二元函数极限存在的必要条件是 __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>求 $\lim_{(x,y) \to (0,0)} \frac{x^2 + y^2}{xy}$（若存在）。</li>
+</ul>
+<ul>
+<li>讨论 $f(x, y) = \begin{cases} \frac{x^2 - y^2}{x^2 + y^2} & (x,y) \neq (0,0) \\ 0 & (x,y) = (0,0) \end{cases}$ 在 $(0,0)$ 处的连续性。</li>
+</ul>
+<h2>偏导数</h2>
+<h3>选择题</h3>
+<ul>
+<li>若 $f(x, y) = x^3 y^2$，则 $f_x = $</li>
+</ul>
+<p>   A. $3x^2 y^2$</p>
+<p>   B. $2x^3 y$</p>
+<p>   C. $x^3 y^2$</p>
+<p>   D. $6x^2 y$</p>
+<ul>
+<li>若 $z = e^{xy}$，则 $\frac{\partial z}{\partial x} = $</li>
+</ul>
+<p>   A. $e^{xy}$</p>
+<p>   B. $y e^{xy}$</p>
+<p>   C. $x e^{xy}$</p>
+<p>   D. $xy e^{xy}$</p>
+<h3>填空题</h3>
+<ul>
+<li>若 $z = \ln(x^2 + y^2)$，则 $\frac{\partial z}{\partial x} = $ __________，$\frac{\partial z}{\partial y} = $ __________。</li>
+<li>若 $f(x, y) = x^2 \sin y$，则 $f_{xx} = $ __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>求 $z = x^2 y + e^{x/y}$ 的偏导数 $\frac{\partial z}{\partial x}$ 和 $\frac{\partial z}{\partial y}$。</li>
+</ul>
+<ul>
+<li>求 $f(x, y) = \arctan \frac{y}{x}$ 的所有二阶偏导数。</li>
+</ul>
+<h2>全微分</h2>
+<h3>选择题</h3>
+<ul>
+<li>函数 $z = x^2 + y^2$ 的全微分为：</li>
+</ul>
+<p>   A. $2x dx + 2y dy$</p>
+<p>   B. $x dx + y dy$</p>
+<p>   C. $dx + dy$</p>
+<p>   D. $2x + 2y$</p>
+<ul>
+<li>函数 $z = e^{xy}$ 在点 $(1, 1)$ 处的全微分为：</li>
+</ul>
+<p>   A. $e dx + e dy$</p>
+<p>   B. $e dx$</p>
+<p>   C. $e dy$</p>
+<p>   D. $2e$</p>
+<h3>填空题</h3>
+<ul>
+<li>全微分 $dz = \frac{\partial z}{\partial x} dx + \frac{\partial z}{\partial y} dy$ 成立的条件是 __________。</li>
+<li>函数可微则偏导数 __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>求 $z = \sin(x + y)$ 的全微分。</li>
+</ul>
+<ul>
+<li>求 $u = xyz$ 的全微分。</li>
+</ul>
+<ul>
+<li>计算 $z = \sqrt{x^2 + y^2}$ 在点 $(3, 4)$ 处当 $dx = 0.1, dy = 0.2$ 时的全微分增量。</li>
+</ul>
+<h2>方向导数与梯度</h2>
+<h3>选择题</h3>
+<ul>
+<li>函数 $f(x, y) = x^2 + y^2$ 在点 $(1, 1)$ 处沿梯度方向的方向导数为：</li>
+</ul>
+<p>   A. $2\sqrt{2}$</p>
+<p>   B. $2$</p>
+<p>   C. $\sqrt{2}$</p>
+<p>   D. $4$</p>
+<h3>填空题</h3>
+<ul>
+<li>梯度 $\nabla f = $ __________。</li>
+<li>方向导数 $\frac{\partial f}{\partial \vec{l}} = \nabla f \cdot \vec{l}$ 的大小等于 __________。</li>
+</ul>
+<h3>解答题</h3>
+<ul>
+<li>求 $f(x, y) = x^2 + xy + y^2$ 在点 $(1, 1)$ 处沿方向 $\vec{l} = (1, 1)$ 的方向导数。</li>
+</ul>
+<ul>
+<li>求 $f(x, y) = \ln \sqrt{x^2 + y^2}$ 的梯度。</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "md-to-html-converter",
+  "version": "1.0.0",
+  "description": "Convert Markdown files to HTML and replace them",
+  "scripts": {
+    "convert": "node convert.js"
+  },
+  "dependencies": {
+    "marked": "^11.0.0"
+  }
+}

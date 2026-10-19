@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第13周：幂级数</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        pre { background-color: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; border: 1px solid #ddd; }
+        code { background-color: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Consolas', 'Monaco', monospace; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin: 10px 0; padding-left: 30px; }
+        li { margin: 5px 0; }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+</head>
+<body>
+<h1>第13周：幂级数</h1>
+<h2>学习目标</h2>
+<ul>
+<li>理解幂级数的概念和收敛半径</li>
+<li>掌握幂级数收敛区间的求法</li>
+<li>理解幂级数的运算性质</li>
+<li>学会将函数展开成幂级数</li>
+<li>掌握幂级数在近似计算中的应用</li>
+</ul>
+<h2>学习内容</h2>
+<h3>1. 幂级数的概念</h3>
+<h4>1.1 定义</h4>
+<p>幂级数是形如 $\sum_{n=0}^{\infty} a_n (x - x_0)^n$ 的级数，其中 $a_n$ 为系数，$x_0$ 为展开点。</p>
+<p>当 $x_0 = 0$ 时，为 $\sum_{n=0}^{\infty} a_n x^n$，称为麦克劳林级数。</p>
+<h4>1.2 收敛半径</h4>
+<p>对于幂级数 $\sum a_n x^n$，设 $\lim_{n \to \infty} |\frac{a_{n+1}}{a_n}| = \rho$ 或 $\lim_{n \to \infty} \sqrt[n]{|a_n|} = \rho$，则收敛半径 $R = \frac{1}{\rho}$。</p>
+<ul>
+<li>$\rho = 0$ 时，$R = \infty$，级数在整个实数轴上收敛</li>
+<li>$\rho = \infty$ 时，$R = 0$，级数仅在 $x = 0$ 处收敛</li>
+<li>$0 < \rho < \infty$ 时，$R = \frac{1}{\rho}$</li>
+</ul>
+<h3>2. 收敛区间与收敛域</h3>
+<h4>2.1 收敛区间的求法</h4>
+<p>对于 $\sum a_n (x - x_0)^n$：</p>
+<ol>
+<li>求 $\rho = \lim |\frac{a_{n+1}}{a_n}|$ 或 $\rho = \lim \sqrt[n]{|a_n|}$</li>
+<li>求 $R = \frac{1}{\rho}$</li>
+<li>判断端点 $x_0 \pm R$ 处的敛散性</li>
+</ol>
+<h4>2.2 例题</h4>
+<ul>
+<li>求 $\sum_{n=0}^{\infty} \frac{x^n}{n!}$ 的收敛域</li>
+</ul>
+<p>   - $\rho = \lim \frac{1/(n+1)!}{1/n!} = \lim \frac{1}{n+1} = 0$，$R = \infty$</p>
+<p>   - 对所有 $x \in (-\infty, +\infty)$ 收敛</p>
+<ul>
+<li>求 $\sum_{n=1}^{\infty} \frac{(x-2)^n}{n}$ 的收敛域</li>
+</ul>
+<p>   - $\rho = 1$，$R = 1$</p>
+<p>   - 区间为 $(1, 3)$</p>
+<p>   - $x = 3$ 时，$\sum \frac{1}{n}$ 发散；$x = 1$ 时，$\sum \frac{(-1)^n}{n}$ 收敛</p>
+<p>   - 收敛域为 $[1, 3)$</p>
+<h3>3. 幂级数的运算</h3>
+<h4>3.1 四则运算</h4>
+<p>若 $\sum a_n x^n$ 和 $\sum b_n x^n$ 的收敛半径分别为 $R_1$ 和 $R_2$，则：</p>
+<ul>
+<li>$\sum (a_n \pm b_n) x^n$ 的收敛半径 $\geq \min(R_1, R_2)$</li>
+<li>$(\sum a_n x^n) \cdot (\sum b_n x^n)$ 的收敛半径 $\geq \min(R_1, R_2)$</li>
+</ul>
+<h4>3.2 分析运算</h4>
+<ul>
+<li>幂级数在其收敛区间内可以逐项求导：$[\sum a_n x^n]' = \sum n a_n x^{n-1}$</li>
+<li>幂级数在其收敛区间内可以逐项积分：$\int \sum a_n x^n dx = \sum \frac{a_n}{n+1} x^{n+1}$</li>
+<li>求导或积分后收敛半径不变，端点处敛散性可能改变</li>
+</ul>
+<h3>4. 函数展开成幂级数</h3>
+<h4>4.1 直接展开法</h4>
+<p>利用泰勒公式：$f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(x_0)}{n!} (x - x_0)^n$</p>
+<h4>4.2 间接展开法</h4>
+<p>利用已知展开式和幂级数的运算性质。</p>
+<p>常用展开式：</p>
+<ul>
+<li>$e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \cdots$</li>
+<li>$\sin x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!} = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots$</li>
+<li>$\cos x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots$</li>
+<li>$\ln(1+x) = \sum_{n=1}^{\infty} \frac{(-1)^{n-1} x^n}{n} = x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots$（$|x| < 1$）</li>
+<li>$(1+x)^\alpha = 1 + \alpha x + \frac{\alpha(\alpha-1)}{2!} x^2 + \cdots$（$|x| < 1$）</li>
+</ul>
+<h3>5. 幂级数的应用</h3>
+<h4>5.1 近似计算</h4>
+<p>例：计算 $e$ 的值</p>
+<p>$$e = \sum_{n=0}^{\infty} \frac{1}{n!}$$</p>
+<p>取前 $n$ 项部分和作为近似值，误差小于余项。</p>
+<h4>5.2 积分计算</h4>
+<p>对于无法用初等函数表示的积分，可以展开为幂级数后逐项积分。</p>
+<h2>学习建议</h2>
+<ul>
+<li>熟记常用函数的幂级数展开式</li>
+<li>熟练掌握收敛半径的求法</li>
+<li>注意端点处敛散性的判断</li>
+<li>多做练习，积累间接展开的经验</li>
+</ul>
+</body>
+</html>

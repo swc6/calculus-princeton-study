@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week12-solutions</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #ddd;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+
+</head>
+<body>
+<h1>第12周：练习答案</h1>
+<h2>基本概念</h2>
+<h3>选择题</h3>
+<ul>
+<li>B. $\lim_{n \to \infty} a_n = 0$</li>
+</ul>
+<p>   解析：级数收敛的必要条件是 $\lim_{n \to \infty} a_n = 0$，但这不是充分条件。</p>
+<ul>
+<li>A. $\frac{3}{2}$</li>
+</ul>
+<p>   解析：几何级数 $\sum_{n=0}^{\infty} (\frac{1}{3})^n = \frac{1}{1 - \frac{1}{3}} = \frac{3}{2}$。</p>
+<ul>
+<li>B. 发散</li>
+</ul>
+<p>   解析：$\lim_{n \to \infty} a_n = \lim_{n \to \infty} \frac{n}{n+1} = 1 \neq 0$，不满足收敛的必要条件，故发散。</p>
+<h3>填空题</h3>
+<ul>
+<li>$1$</li>
+</ul>
+<p>   解析：$\sum_{n=1}^{\infty} \frac{1}{2^n} = \frac{\frac{1}{2}}{1 - \frac{1}{2}} = 1$。</p>
+<ul>
+<li>必定发散</li>
+</ul>
+<p>   解析：若 $\lim_{n \to \infty} a_n \neq 0$，则级数必定发散。</p>
+<ul>
+<li>$|r| < 1$</li>
+</ul>
+<p>   解析：几何级数 $\sum ar^n$ 收敛的充分必要条件是 $|r| < 1$。</p>
+<h3>解答题</h3>
+<ul>
+<li>发散</li>
+</ul>
+<p>   解析：$\frac{n}{n^2 + 1} \sim \frac{1}{n}$，而 $\sum \frac{1}{n}$ 发散，由比较判别法知原级数发散。</p>
+<ul>
+<li>$\sum_{n=0}^{\infty} \frac{2^n}{3^n} = \sum_{n=0}^{\infty} (\frac{2}{3})^n = \frac{1}{1 - \frac{2}{3}} = 3$</li>
+</ul>
+<h2>正项级数判别</h2>
+<h3>选择题</h3>
+<ul>
+<li>B. $\sum \frac{1}{n^2}$</li>
+</ul>
+<p>   解析：$\frac{1}{n^2 + 1} \sim \frac{1}{n^2}$，应与 $\sum \frac{1}{n^2}$ 比较。</p>
+<ul>
+<li>A. 收敛</li>
+</ul>
+<p>   解析：用比值判别法：$\lim \frac{a_{n+1}}{a_n} = \lim \frac{(n+1)!}{(n+1)^{n+1}} \cdot \frac{n^n}{n!} = \lim \frac{n^n}{(n+1)^n} = \frac{1}{e} < 1$，故收敛。</p>
+<ul>
+<li>B. $3$</li>
+</ul>
+<p>   解析：$\lim \frac{a_{n+1}}{a_n} = \lim \frac{3^{n+1}}{(n+1)^2} \cdot \frac{n^2}{3^n} = 3 \lim \frac{n^2}{(n+1)^2} = 3$。</p>
+<h3>填空题</h3>
+<ul>
+<li>$p > 1$；$p \leq 1$</li>
+</ul>
+<p>   解析：$p$ 级数 $\sum \frac{1}{n^p}$ 当 $p > 1$ 时收敛，当 $p \leq 1$ 时发散。</p>
+<ul>
+<li>发散</li>
+</ul>
+<p>   解析：用积分判别法：$\int_2^\infty \frac{dx}{x \ln x} = [\ln \ln x]_2^\infty = \infty$，故发散。</p>
+<ul>
+<li>$\frac{1}{e}$</li>
+</ul>
+<p>   解析：$\lim \sqrt[n]{a_n} = \lim \frac{n}{n+1} = 1$？实际上，$\lim \sqrt[n]{(\frac{n}{n+1})^n} = \lim (\frac{n}{n+1})^n = \frac{1}{e}$。</p>
+<h3>解答题</h3>
+<ul>
+<li>收敛</li>
+</ul>
+<p>   解析：$\frac{1}{n^2 + n} \leq \frac{1}{n^2}$，而 $\sum \frac{1}{n^2}$ 收敛，故原级数收敛。</p>
+<ul>
+<li>发散</li>
+</ul>
+<p>   解析：用比值判别法：$\lim \frac{a_{n+1}}{a_n} = \lim \frac{(n+1)!}{10^{n+1}} \cdot \frac{10^n}{n!} = \lim \frac{n+1}{10} = \infty > 1$，故发散。</p>
+<ul>
+<li>收敛</li>
+</ul>
+<p>   解析：用比值判别法：$\lim \frac{a_{n+1}}{a_n} = \lim \frac{2^{n+1}}{(n+1)(n+2)} \cdot \frac{n(n+1)}{2^n} = 2 \lim \frac{n}{n+2} = 2 > 1$，故收敛。</p>
+<ul>
+<li>收敛</li>
+</ul>
+<p>   解析：$\frac{1}{\sqrt{n^3 + 1}} \sim \frac{1}{n^{3/2}}$，而 $\sum \frac{1}{n^{3/2}}$ 收敛，故原级数收敛。</p>
+<h2>交错级数</h2>
+<h3>选择题</h3>
+<ul>
+<li>B. 条件收敛</li>
+</ul>
+<p>   解析：$\sum \frac{(-1)^{n-1}}{n}$ 收敛，但 $\sum \frac{1}{n}$ 发散，故条件收敛。</p>
+<ul>
+<li>B. 交错级数</li>
+</ul>
+<p>   解析：莱布尼茨判别法专门适用于交错级数。</p>
+<ul>
+<li>B. 条件收敛</li>
+</ul>
+<p>   解析：$\sum \frac{(-1)^{n-1}}{\sqrt{n}}$ 收敛（莱布尼茨判别法），但 $\sum \frac{1}{\sqrt{n}}$ 发散（$p = \frac{1}{2} \leq 1$），故条件收敛。</p>
+<h3>填空题</h3>
+<ul>
+<li>单调递减；趋于零</li>
+</ul>
+<p>   解析：莱布尼茨判别法的两个条件：$a_{n+1} \leq a_n$ 且 $\lim a_n = 0$。</p>
+<ul>
+<li>$\ln 2$</li>
+</ul>
+<p>   解析：交错调和级数 $\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n} = \ln 2$。</p>
+<ul>
+<li>绝对</li>
+</ul>
+<p>   解析：$\sum \frac{1}{n^2}$ 收敛，故 $\sum \frac{(-1)^{n-1}}{n^2}$ 绝对收敛。</p>
+<h3>解答题</h3>
+<ul>
+<li>绝对收敛</li>
+</ul>
+<p>   解析：$\sum \frac{1}{n^2}$ 收敛，故 $\sum \frac{(-1)^{n-1}}{n^2}$ 绝对收敛。</p>
+<ul>
+<li>发散</li>
+</ul>
+<p>   解析：$a_n = \frac{n}{n+1} \to 1 \neq 0$，不满足收敛的必要条件，故发散。</p>
+<ul>
+<li>收敛</li>
+</ul>
+<p>   解析：$a_n = \frac{1}{\ln(n+1)}$ 单调递减趋于 0，满足莱布尼茨判别法条件，故收敛。</p>
+<h2>综合判别</h2>
+<h3>选择题</h3>
+<ul>
+<li>A. 绝对收敛</li>
+</ul>
+<p>   解析：$|\frac{\sin n}{n^2}| \leq \frac{1}{n^2}$，而 $\sum \frac{1}{n^2}$ 收敛，故绝对收敛。</p>
+<ul>
+<li>A. 收敛</li>
+</ul>
+<p>   解析：$\lim \sqrt[n]{a_n} = \frac{1}{2} < 1$，由根值判别法知收敛。</p>
+<h3>填空题</h3>
+<ul>
+<li>条件</li>
+</ul>
+<p>   解析：$\sum \frac{n}{n^2 + 1} \sim \sum \frac{1}{n}$ 发散，故 $\sum \frac{(-1)^{n-1} n}{n^2 + 1}$ 条件收敛。</p>
+<ul>
+<li>发散</li>
+</ul>
+<p>   解析：分子趋向无穷大比分母快，但需仔细分析。实际上这是发散的。</p>
+<h3>解答题</h3>
+<ul>
+<li>绝对收敛</li>
+</ul>
+<p>   解析：用比值判别法：$\lim \frac{a_{n+1}}{a_n} = \frac{1}{2} < 1$，故绝对收敛。</p>
+<ul>
+<li>收敛</li>
+</ul>
+<p>   解析：$\frac{1}{n} \sin \frac{\pi}{n} \sim \frac{\pi}{n^2}$，而 $\sum \frac{1}{n^2}$ 收敛，故收敛。</p>
+<ul>
+<li>当 $p > 1$ 时，绝对收敛；当 $0 < p \leq 1$ 时，条件收敛；当 $p \leq 0$ 时，发散</li>
+</ul>
+<p>   解析：$p > 1$ 时，$\sum \frac{1}{n^p}$ 收敛；$0 < p \leq 1$ 时，$\sum \frac{1}{n^p}$ 发散但交错级数收敛；$p \leq 0$ 时，$a_n \not\to 0$，发散。</p>
+<ul>
+<li>$\frac{\pi}{4}$</li>
+</ul>
+<p>   解析：这是 $\arctan x$ 的展开式在 $x = 1$ 处的值，$\arctan 1 = \frac{\pi}{4}$。</p>
+</body>
+</html>

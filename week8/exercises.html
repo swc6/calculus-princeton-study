@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week8-exercises</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #ddd;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+
+</head>
+<body>
+<h1>第8周：练习题目</h1><h2>第一类换元法（凑微分法）</h2><h3>选择题</h3><ul><li>$\int \frac{1}{3x + 1} dx = $</li></ul><p>   A. $\ln|3x + 1| + C$</p><p>   B. $\frac{1}{3} \ln|3x + 1| + C$</p><p>   C. $3 \ln|3x + 1| + C$</p><p>   D. $\frac{1}{3x + 1} + C$</p><ul><li>$\int x e^{x^2} dx = $</li></ul><p>   A. $e^{x^2} + C$</p><p>   B. $\frac{1}{2} e^{x^2} + C$</p><p>   C. $2 e^{x^2} + C$</p><p>   D. $x^2 e^{x^2} + C$</p><ul><li>$\int \sin 2x dx = $</li></ul><p>   A. $-\cos 2x + C$</p><p>   B. $\frac{1}{2} \cos 2x + C$</p><p>   C. $-\frac{1}{2} \cos 2x + C$</p><p>   D. $2 \cos 2x + C$</p><h3>填空题</h3><ul><li>$\int \frac{x}{1 + x^2} dx = $ __________</li></ul><ul><li>$\int e^{-x} dx = $ __________</li></ul><ul><li>$\int \frac{\sin \sqrt{x}}{\sqrt{x}} dx = $ __________</li></ul><h3>解答题</h3><ul><li>求$\int (2x + 1)^5 dx$。</li></ul><ul><li>求$\int \frac{1}{x \ln x} dx$。</li></ul><ul><li>求$\int \sin^3 x \cos x dx$。</li></ul><ul><li>求$\int \frac{e^{\sqrt{x}}}{\sqrt{x}} dx$。</li></ul><ul><li>求$\int \frac{x}{\sqrt{1 - x^2}} dx$。</li></ul><ul><li>求$\int \frac{\arctan x}{1 + x^2} dx$。</li></ul><ul><li>求$\int \sec^2 x \tan x dx$。</li></ul><ul><li>求$\int \frac{1}{x^2} e^{1/x} dx$。</li></ul><h2>第二类换元法</h2><h3>选择题</h3><ul><li>对于$\int \sqrt{a^2 - x^2} dx$，合适的换元是：</li></ul><p>   A. $x = a \tan t$</p><p>   B. $x = a \sin t$</p><p>   C. $x = a \sec t$</p><p>   D. $x = a \cot t$</p><ul><li>对于$\int \frac{1}{\sqrt{x^2 + a^2}} dx$，合适的换元是：</li></ul><p>   A. $x = a \tan t$</p><p>   B. $x = a \sin t$</p><p>   C. $x = a \sec t$</p><p>   D. $x = a \cot t$</p><ul><li>对于$\int \frac{1}{\sqrt{x^2 - a^2}} dx$，合适的换元是：</li></ul><p>   A. $x = a \tan t$</p><p>   B. $x = a \sin t$</p><p>   C. $x = a \sec t$</p><p>   D. $x = a \cot t$</p><h3>填空题</h3><ul><li>$\int \frac{1}{(1 + x^2)^{3/2}} dx = $ __________</li></ul><ul><li>$\int \frac{\sqrt{x^2 - 4}}{x} dx = $ __________</li></ul><ul><li>$\int \frac{1}{x \sqrt{x^2 - 1}} dx = $ __________</li></ul><h3>解答题</h3><ul><li>求$\int \sqrt{4 - x^2} dx$。</li></ul><ul><li>求$\int \frac{1}{\sqrt{x^2 + 4}} dx$。</li></ul><ul><li>求$\int \frac{1}{\sqrt{x^2 - 9}} dx$。</li></ul><ul><li>求$\int \frac{x^2}{\sqrt{1 - x^2}} dx$。</li></ul><ul><li>求$\int \frac{1}{x^2 \sqrt{1 + x^2}} dx$。</li></ul><ul><li>求$\int \frac{1}{\sqrt{1 + e^{2x}}} dx$。</li></ul><h2>定积分的换元法</h2><h3>选择题</h3><ul><li>$\int_0^2 x \sqrt{4 - x^2} dx = $</li></ul><p>   A. $\frac{8}{3}$</p><p>   B. $\frac{4}{3}$</p><p>   C. $\frac{16}{3}$</p><p>   D. $\frac{2}{3}$</p><ul><li>$\int_0^{\pi/2} \sin^3 x \cos x dx = $</li></ul><p>   A. $\frac{1}{4}$</p><p>   B. $\frac{1}{2}$</p><p>   C. $\frac{3}{4}$</p><p>   D. 1</p><ul><li>$\int_1^e \frac{\ln x}{x} dx = $</li></ul><p>   A. $\frac{1}{2}$</p><p>   B. 1</p><p>   C. $\frac{3}{2}$</p><p>   D. 2</p><h3>填空题</h3><ul><li>$\int_0^1 \frac{x}{1 + x^2} dx = $ __________</li></ul><ul><li>$\int_0^{\pi/2} \cos^3 x \sin x dx = $ __________</li></ul><ul><li>$\int_0^2 \frac{1}{\sqrt{4 + x^2}} dx = $ __________</li></ul><h3>解答题</h3><ul><li>计算$\int_0^1 (2x + 1)^3 dx$。</li></ul><ul><li>计算$\int_0^{\pi/2} \sin 2x dx$。</li></ul><ul><li>计算$\int_1^2 \frac{1}{x(\ln x)^2} dx$。</li></ul><ul><li>计算$\int_0^a \sqrt{a^2 - x^2} dx$（$a > 0$）。</li></ul><ul><li>计算$\int_0^1 \frac{x}{\sqrt{1 + x^2}} dx$。</li></ul><ul><li>计算$\int_1^{\sqrt{3}} \frac{1}{x^2 \sqrt{1 + x^2}} dx$。</li></ul><ul><li>计算$\int_2^4 \frac{\sqrt{x^2 - 4}}{x} dx$。</li></ul><ul><li>计算$\int_0^{\pi/4} \tan^3 x \sec^2 x dx$。</li></ul><h2>综合应用题</h2><ul><li>求$\int \frac{1}{\sqrt{e^x + 1}} dx$。</li></ul><ul><li>求$\int \frac{x^3}{\sqrt{1 + x^2}} dx$。</li></ul><ul><li>求$\int \frac{1}{x \sqrt{x^2 - a^2}} dx$（$a > 0$）。</li></ul><ul><li>求$\int \frac{\sqrt{a^2 - x^2}}{x^2} dx$（$a > 0$）。</li></ul><ul><li>求$\int \frac{x}{\sqrt{x^2 + 2x + 2}} dx$。</li></ul><ul><li>计算$\int_0^{\pi/2} \cos^5 x dx$。</li></ul><ul><li>计算$\int_{-a}^a \sqrt{a^2 - x^2} dx$（$a > 0$）。</li></ul><ul><li>证明：$\int_0^{\pi/2} \sin^n x dx = \int_0^{\pi/2} \cos^n x dx$。</li></ul><ul><li>求$\int \frac{1}{1 + e^x} dx$。</li></ul><ul><li>求$\int \frac{x^2}{(x^2 + a^2)^{3/2}} dx$（$a > 0$）。</li></ul>
+</body>
+</html>

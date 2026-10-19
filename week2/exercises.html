@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week2-exercises</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #ddd;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+
+</head>
+<body>
+<h1>第二周：练习题目</h1><h2>基础概念题</h2><h3>选择题</h3><ul><li>下列关于极限的说法正确的是：</li></ul><p>   A. $\lim_{x \to 0} \frac{1}{x}$ 存在且等于0</p><p>   B. $\lim_{x \to 0} \frac{|x|}{x}$ 存在且等于1</p><p>   C. $\lim_{x \to 0} \frac{\sin x}{x} = 1$</p><p>   D. $\lim_{x \to \infty} \frac{x}{x+1}$ 不存在</p><ul><li>若 $\lim_{x \to a^+} f(x) = L_1$，$\lim_{x \to a^-} f(x) = L_2$，则当下列条件成立时，$\lim_{x \to a} f(x)$ 存在：</li></ul><p>   A. $L_1 = L_2$</p><p>   B. $L_1 \neq L_2$</p><p>   C. $L_1 + L_2 = 0$</p><p>   D. $L_1 \cdot L_2 = 1$</p><ul><li>当 $x \to 0$ 时，下列函数不是无穷小量的是：</li></ul><p>   A. $x^2$</p><p>   B. $\sin x$</p><p>   C. $\frac{1}{x}$</p><p>   D. $\ln(1+x)$</p><h3>填空题</h3><ul><li>$\lim_{x \to 2} (x^2 - 3x + 1) = $ __________</li></ul><ul><li>$\lim_{x \to 0} \frac{\sin 5x}{x} = $ __________</li></ul><ul><li>$\lim_{x \to \infty} \left(1 + \frac{3}{x}\right)^x = $ __________</li></ul><ul><li>若 $\lim_{x \to 1} \frac{x^2 - ax + 2}{x - 1} = 3$，则 $a = $ __________</li></ul><h2>求极限计算题</h2><h3>直接代入法练习</h3><ul><li>$\lim_{x \to 3} (2x^2 - 5x + 1)$</li><li>$\lim_{x \to -1} \frac{x^3 + 1}{x + 1}$</li><li>$\lim_{x \to 4} \frac{\sqrt{x} - 2}{x - 4}$</li></ul><h3>因式分解法练习</h3><ul><li>$\lim_{x \to 2} \frac{x^2 - 4}{x^2 - x - 2}$</li><li>$\lim_{x \to 1} \frac{x^3 - 1}{x^2 - 1}$</li><li>$\lim_{x \to 3} \frac{x^2 - 9}{\sqrt{x+1} - 2}$</li></ul><h3>有理化法练习</h3><ul><li>$\lim_{x \to 0} \frac{\sqrt{1+x} - 1}{x}$</li><li>$\lim_{x \to 4} \frac{\sqrt{x} - 2}{\sqrt{x+1} - \sqrt{5}}$</li><li>$\lim_{x \to \infty} (\sqrt{x+1} - \sqrt{x})$</li></ul><h3>两个重要极限应用</h3><ul><li>$\lim_{x \to 0} \frac{\sin 3x}{\sin 5x}$</li><li>$\lim_{x \to 0} \frac{\tan x}{\sin x}$</li><li>$\lim_{x \to 0} \frac{1 - \cos x}{x^2}$</li><li>$\lim_{x \to \infty} \left(1 + \frac{2}{x}\right)^{3x}$</li><li>$\lim_{x \to 0} (1 + 3x)^{1/x}$</li><li>$\lim_{x \to \infty} \left(\frac{x+1}{x-1}\right)^x$</li></ul><h3>等价无穷小替换练习</h3><ul><li>$\lim_{x \to 0} \frac{\sin x}{\arctan x}$</li><li>$\lim_{x \to 0} \frac{e^x - 1}{\ln(1+x)}$</li><li>$\lim_{x \to 0} \frac{(1+x)^3 - 1}{x}$</li><li>$\lim_{x \to 0} \frac{\tan x - \sin x}{x^3}$</li></ul><h2>证明题</h2><ul><li>证明：$\lim_{x \to 0} \frac{\sin x}{x} = 1$</li></ul><ul><li>证明：$\lim_{x \to 0} \frac{1 - \cos x}{x^2} = \frac{1}{2}$</li></ul><ul><li>用夹逼定理证明：$\lim_{x \to +\infty} \frac{\sin x}{x} = 0$</li></ul><ul><li>证明：若 $\lim f(x) = A$，且 $A > 0$，则存在 $\delta > 0$，使得当 $0 < |x - x_0| < \delta$ 时，$f(x) > 0$</li></ul><h2>综合应用题</h2><ul><li>已知 $f(x) = \begin{cases} x^2 + 1 & \text{当 } x < 1 \\ ax + b & \text{当 } x \geq 1 \end{cases}$，若 $\lim_{x \to 1} f(x)$ 存在，求 $a$ 和 $b$ 的值。</li></ul><ul><li>求 $\lim_{x \to 0} \frac{\sqrt{1+x} - \sqrt{1-x}}{x}$</li></ul><ul><li>求 $\lim_{x \to 0} \frac{\sin x - \tan x}{x^3}$</li></ul><ul><li>求 $\lim_{x \to \infty} \left(\sqrt{x^2 + x} - x\right)$</li></ul><ul><li>求 $\lim_{n \to \infty} \left(\frac{1}{n^2} + \frac{2}{n^2} + \cdots + \frac{n}{n^2}\right)$</li></ul><ul><li>讨论函数 $f(x) = \frac{|x|}{x}$ 当 $x \to 0$ 时的极限是否存在。</li></ul><ul><li>求 $\lim_{x \to 0} x \cdot \sin \frac{1}{x}$，并说明理由。</li></ul><ul><li>已知 $\lim_{x \to 2} \frac{x^2 + ax + b}{x^2 - 4} = 3$，求 $a$ 和 $b$ 的值。</li></ul><h2>提高题</h2><ul><li>求 $\lim_{x \to 0} \frac{\sin x}{x}$ 的 $n$ 阶泰勒展开。</li></ul><ul><li>证明：$\lim_{x \to 0^+} x^x = 1$</li></ul><ul><li>求 $\lim_{x \to 0} \left(\frac{\sin x}{x}\right)^{1/x^2}$</li></ul><ul><li>已知 $\lim_{x \to 0} \frac{\ln(1+x) - ax}{x^2} = b$，求 $a$ 和 $b$ 的值。</li></ul><ul><li>求 $\lim_{x \to 0} \frac{\cos x - 1}{\ln(1+x)}$</li></ul>
+</body>
+</html>

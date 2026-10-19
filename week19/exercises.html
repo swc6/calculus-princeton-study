@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week19-exercises</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+        h1, h2, h3 { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        pre { background-color: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; border: 1px solid #ddd; }
+        code { background-color: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Consolas', 'Monaco', monospace; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin: 10px 0; padding-left: 30px; }
+        li { margin: 5px 0; }
+    </style>
+<script src="../js/polyfill.min.js"></script>
+    <script src="../js/mathjax-config.js"></script>
+    <script id="MathJax-script" async src="../js/mathjax.min.js"></script>
+
+</head>
+<body>
+<h1>第19周：模拟测试题</h1>
+<div style="background-color: #fff3cd; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #ffc107;">
+<p><strong>提示：</strong>这是模拟测试题，请先独立完成，然后再查看答案。</p>
+</div>
+<h2>第一部分：极限与微分（30分）</h2>
+<h3>1. 求极限（15分）</h3>
+<ul>
+<li>(1) $\lim_{x \to 0} \frac{\tan x - \sin x}{x^3}$</li>
+<li>(2) $\lim_{x \to \infty} (\frac{x+1}{x-1})^x$</li>
+<li>(3) $\lim_{x \to 0^+} x^{\sin x}$</li>
+</ul>
+<h3>2. 求导数（15分）</h3>
+<ul>
+<li>(1) $y = \ln(\tan 2x)$，求 $y'$</li>
+<li>(2) $y = (x^2 + 1)^x$，求 $y'$</li>
+<li>(3) 由 $x^2 + xy + y^2 = 1$ 确定 $y = f(x)$，求 $\frac{dy}{dx}$</li>
+</ul>
+<h2>第二部分：积分（30分）</h2>
+<h3>3. 计算不定积分（15分）</h3>
+<ul>
+<li>(1) $\int \frac{dx}{x \ln x}$</li>
+<li>(2) $\int x^2 e^x dx$</li>
+<li>(3) $\int \frac{dx}{\sqrt{x^2 + a^2}}$</li>
+</ul>
+<h3>4. 计算定积分（15分）</h3>
+<ul>
+<li>(1) $\int_0^1 \frac{x}{1+x^2} dx$</li>
+<li>(2) $\int_0^1 x \ln(x+1) dx$</li>
+<li>(3) $\int_0^1 \frac{dx}{\sqrt{4 - x^2}}$</li>
+</ul>
+<h2>第三部分：级数（20分）</h2>
+<h3>5. 判断敛散性（10分）</h3>
+<ul>
+<li>(1) $\sum_{n=1}^{\infty} \frac{n}{n^2 + 1}$</li>
+<li>(2) $\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n^2}$</li>
+</ul>
+<h3>6. 幂级数（10分）</h3>
+<ul>
+<li>(1) 求 $\sum_{n=0}^{\infty} \frac{x^n}{n+1}$ 的收敛半径和收敛域</li>
+<li>(2) 将 $f(x) = \frac{1}{1+x}$ 展开成麦克劳林级数</li>
+</ul>
+<h2>第四部分：多元函数微积分（20分）</h2>
+<h3>7. 偏导数与全微分（10分）</h3>
+<ul>
+<li>(1) $z = e^{x^2 + y^2}$，求 $\frac{\partial^2 z}{\partial x \partial y}$</li>
+<li>(2) $z = x^3 + y^3 - 3xy$，求全微分 $dz$</li>
+</ul>
+<h3>8. 二重积分（10分）</h3>
+<ul>
+<li>(1) 计算 $\iint_D x y d\sigma$，其中 $D$ 由 $y = x$ 和 $y = x^2$ 围成</li>
+<li>(2) 将 $\int_0^1 \int_0^{\sqrt{1-x^2}} f(x, y) dy dx$ 化为极坐标下的二次积分</li>
+</ul>
+<h2>附加题（10分）</h2>
+<ul>
+<li>利用泰勒级数（取前3项）计算 $\int_0^1 e^{-x^2} dx$ 的近似值，并估计误差。</li>
+</ul>
+</body>
+</html>
